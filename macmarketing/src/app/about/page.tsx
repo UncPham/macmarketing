@@ -33,23 +33,23 @@ export default function AboutPage() {
   const values = [
     {
       icon: <Target className="h-8 w-8 text-primary" />,
-      title: "Results-Driven",
-      description: "We focus on delivering measurable results that impact your bottom line.",
+      title: "Tập trung kết quả",
+      description: "Chúng tôi tập trung vào việc mang lại kết quả có thể đo lường được, tác động trực tiếp đến doanh thu của bạn.",
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Client-Focused",
-      description: "Your success is our success. We work closely with you to achieve your goals.",
+      title: "Khách hàng là trọng tâm",
+      description: "Thành công của bạn chính là thành công của chúng tôi. Chúng tôi làm việc sát sao để đạt được mục tiêu của bạn.",
     },
     {
       icon: <Award className="h-8 w-8 text-primary" />,
-      title: "Excellence",
-      description: "We maintain the highest standards in everything we do.",
+      title: "Chất lượng hoàn hảo",
+      description: "Chúng tôi duy trì tiêu chuẩn cao nhất trong mọi việc chúng tôi làm cho ngành nail.",
     },
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
-      title: "Innovation",
-      description: "We stay ahead of trends to provide cutting-edge solutions.",
+      title: "Đổi mới sáng tạo",
+      description: "Chúng tôi luôn dẫn đầu xu hướng để cung cấp các giải pháp marketing tiên tiến nhất.",
     },
   ]
 
@@ -62,14 +62,14 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
             <Badge variant="secondary" className="w-fit mx-auto">
-              About MAC Marketing
+              About TD Agency
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">
-              We Are <span className="text-primary">MAC Marketing</span>
+              Chuyên gia Marketing <span className="text-primary">cho ngành Nail</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              With over 10 years of experience in digital marketing, we've helped hundreds of businesses grow their
-              online presence and achieve their marketing goals through innovative strategies and data-driven solutions.
+              Với hơn 10 năm kinh nghiệm trong lĩnh vực marketing cho ngành nail, chúng tôi đã giúp hàng trăm tiệm nail
+              phát triển thương hiệu và đạt được mục tiêu kinh doanh thông qua các chiến lược sáng tạo và giải pháp hiệu quả.
             </p>
           </div>
         </div>
@@ -80,26 +80,25 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Our Story</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Câu chuyện của chúng tôi</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2014, MAC Marketing began as a small team of passionate digital marketers who believed that
-                  every business deserves to succeed online. We started with a simple mission: to help businesses grow
-                  through effective digital marketing strategies.
+                  TD Agency được thành lập với niềm tin rằng mỗi tiệm nail đều xứng đáng có được sự thành công. Chúng tôi bắt đầu
+                  với sứ mệnh đơn giản: giúp các tiệm nail phát triển bền vững thông qua các chiến lược marketing hiệu quả.
                 </p>
                 <p>
-                  Over the years, we've evolved into a full-service marketing agency, expanding our services to include
-                  web development, SEO, social media marketing, and comprehensive digital solutions. Our team has grown,
-                  but our commitment to delivering exceptional results for our clients remains unchanged.
+                  Qua nhiều năm, chúng tôi đã phát triển thành agency marketing chuyên biệt cho ngành nail, mở rộng dịch vụ
+                  bao gồm thiết kế website, SEO, quản lý mạng xã hội và các giải pháp marketing tổng thể. Đội ngũ của chúng tôi
+                  không ngừng phát triển, nhưng cam kết mang lại kết quả xuất sắc cho khách hàng vẫn không thay đổi.
                 </p>
                 <p>
-                  Today, we're proud to have helped over 500 businesses achieve their marketing goals, from startups to
-                  established enterprises across various industries.
+                  Ngày nay, chúng tôi tự hào đã giúp hơn 500 tiệm nail đạt được mục tiêu marketing, từ các tiệm mới mở
+                  đến những chuỗi tiệm nail lớn trên khắp các bang.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <img src="/marketing-agency-office-with-team-collaboration-an.png" alt="MAC Marketing Office" className="rounded-lg shadow-lg" />
+              <img src="/marketing-agency-office-with-team-collaboration-an.png" alt="TD Agency Office" className="rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -109,9 +108,9 @@ export default function AboutPage() {
       <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Our Values</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Giá trị cốt lõi</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              These core values guide everything we do and shape how we work with our clients.
+              Những giá trị cốt lõi này định hướng mọi hoạt động của chúng tôi và cách chúng tôi phục vụ khách hàng.
             </p>
           </div>
 
@@ -131,45 +130,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Meet Our Team</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our experienced team of marketing professionals is dedicated to your success.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center border-border">
-                <CardHeader className="space-y-4">
-                  <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover"
-                  />
-                  <div>
-                    <CardTitle className="text-xl">{member.name}</CardTitle>
-                    <CardDescription className="text-primary font-medium">{member.role}</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold">Ready to Work With Us?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold">Sẵn sàng hợp tác với chúng tôi?</h2>
           <p className="text-xl text-primary-foreground/90">
-            Let's discuss how we can help your business grow and succeed.
+            Hãy thảo luận về cách chúng tôi có thể giúp tiệm nail của bạn phát triển và thành công.
           </p>
           <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
-            <Link href="/contact">Get In Touch</Link>
+            <Link href="/contact">Liên hệ ngay</Link>
           </Button>
         </div>
       </section>

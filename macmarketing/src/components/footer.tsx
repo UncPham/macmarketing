@@ -9,11 +9,11 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">MAC</div>
-              <span className="font-bold text-xl text-foreground">Marketing</span>
+              <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">TD</div>
+              <span className="font-bold text-xl text-foreground">Agency</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              Professional marketing services to help your business grow and succeed in the digital world.
+                Chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
             </p>
           </div>
 
