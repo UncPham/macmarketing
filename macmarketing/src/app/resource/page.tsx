@@ -192,7 +192,7 @@ export default function ResourcePage() {
                       <span style={{ color: '#EFEEEA' }} className="text-sm">→</span>
                     </div>
                     <CardTitle className="text-2xl flex items-center gap-2" style={{ color: '#FE7743' }}>
-                      <span className="text-2xl">{currentService.icon}</span>
+                      {/* <span className="text-2xl">{currentService.icon}</span> */}
                       {currentService.title}
                     </CardTitle>
                   </div>
