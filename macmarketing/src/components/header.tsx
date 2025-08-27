@@ -23,8 +23,8 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">MAC</div>
-            <span className="font-bold text-xl text-foreground">Marketing</span>
+            <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">TD</div>
+            <span className="font-bold text-xl text-foreground">AGENCY</span>
           </Link>
 
           {/* Desktop Navigation */}

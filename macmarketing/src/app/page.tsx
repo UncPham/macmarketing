@@ -3,42 +3,71 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Users, Target, TrendingUp, Award, Globe, Smartphone, Search, BarChart3 } from "lucide-react"
+import { ArrowRight, Users, Target, TrendingUp, Award, Globe, Smartphone, Search, BarChart3, Heart, Settings } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
   const services = [
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
-      title: "Website & App Development",
-      description: "Professional website and mobile app development with modern design and functionality.",
-      price: "From $29/month",
+      title: "Xây dựng Website & App",
+      description: "TD Agency thiết kế và phát triển website, app phù hợp với bộ nhận diện và sở thích của từng khách hàng. Đồng thời đáp ứng được tiêu chuẩn SEO của Google, chúng tôi bảo đảm website của Quý vị được sử dụng trên tất cả các thiết bị công nghệ.",
     },
     {
       icon: <Search className="h-8 w-8 text-primary" />,
-      title: "SEO Optimization",
-      description: "Improve your search engine rankings and drive organic traffic to your website.",
-      price: "From $79/month",
+      title: "SEO - Search Engine Marketing",
+      description: "Mỗi Zipcode, TD Agency cam kết chỉ phục vụ duy nhất 1 khách hàng trong mỗi ngành. Với tiêu chí tập trung vào chất lượng và mục tiêu mang lại giá trị bến vũng, chúng tôi có chính sách hoàn lại 100% chi phí nếu không đạt được mục tiêu.",
     },
     {
       icon: <Smartphone className="h-8 w-8 text-primary" />,
       title: "Social Media Marketing",
-      description: "Build your brand presence across social media platforms with engaging content.",
-      price: "From $68/month",
+      description: "Sáng tạo nội dung và cập nhật đồng bộ trên tất cả các trang mạng xã hội. TD Agency đo lường các nền tảng phù hợp với khu vực, đối tượng khách hàng của Quý vị, từ đó thực hiện các chiến dịch cho hiệu quả, đảm bảo khoản đầu tư của bạn được sử dụng theo cách tiết kiệm chi phí nhất.",
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
-      title: "Digital Analytics",
-      description: "Track and analyze your digital marketing performance with detailed insights.",
-      price: "From $99/month",
+      title: "Hệ thống bán hàng",
+      description: "Khi Quý vị cố gắng tìm kiếm khách hàng mà không có phương án quản trị, chúng tôi có thể giúp Quý vị đạt được 50% chi phí quảng cáo, và 70% doanh thu. Ngoài việc giúp tiết kiệm lệ phí mỗi tháng, chúng tôi có trên 80 nhân sự hỗ trợ về kỳ thuật làm việc tân tinh 24/7.",
     },
   ]
 
   const stats = [
-    { icon: <Users className="h-6 w-6" />, value: "500+", label: "Happy Clients" },
-    { icon: <Target className="h-6 w-6" />, value: "1000+", label: "Projects Completed" },
-    { icon: <TrendingUp className="h-6 w-6" />, value: "95%", label: "Success Rate" },
-    { icon: <Award className="h-6 w-6" />, value: "10+", label: "Years Experience" },
+    { icon: <Users className="h-6 w-6" />, value: "100+", label: "Khách hàng hài lòng" },
+    { icon: <Target className="h-6 w-6" />, value: "200+", label: "Dự án hoàn thành" },
+    { icon: <TrendingUp className="h-6 w-6" />, value: "95%", label: "Tỷ lệ thành công" },
+    { icon: <Award className="h-6 w-6" />, value: "10+", label: "Năm kinh nghiệm" },
+  ]
+
+  const whyChooseUs = [
+    {
+      icon: <TrendingUp className="h-12 w-12 text-primary" />,
+      title: "TIẾT KIỆM CHI PHÍ",
+      features: [
+        "Lệ phí thấp nhất Hoa Kỳ",
+        "80 nhân sự ngữ hỗ trợ Tiếng Việt 24/7",
+        "Tiền vào tài khoản ngay tiếp theo",
+        "Không hợp đồng ràng buộc"
+      ]
+    },
+    {
+      icon: <Target className="h-12 w-12 text-primary" />,
+      title: "MARKETING ĐỘC QUYỀN",
+      features: [
+        "Mỗi zipcode TD Agency chỉ cung cấp dịch vụ SEO đến 1 khách hàng",
+        "Cam kết chất lượng và tiến độ",
+        "Website chuẩn SEO với tốc độ tải cao",
+        "1 stop support từ đội ngũ thương trực"
+      ]
+    },
+    {
+      icon: <Users className="h-12 w-12 text-primary" />,
+      title: "DỊCH VỤ ĐA DẠNG",
+      features: [
+        "Xây dựng thương hiệu, phát triển kênh mạng xã hội",
+        "Tối ưu hóa website, đưa doanh nghiệp lên top Google, tăng khả năng tiếp cận khách hàng.",
+        "Combo nhiều dịch vụ với chi phí tối ưu, phù hợp cho doanh nghiệp mọi quy mô.",
+        "Marketing, SEO và hỗ trợ khách hàng trọn gói, tối ưu doanh thu ngành làm đẹp."
+      ]
+    }
   ]
 
   return (
@@ -55,24 +84,23 @@ export default function HomePage() {
                   Professional Marketing Solutions
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                  <span className="text-primary">MAC MARKETING</span>
+                  <span className="text-primary">TD AGENCY</span>
                   <br />
-                  Real People, Real Stories
+                  Giải pháp marketing chuyên biệt cho ngành Nail
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  We help businesses grow through innovative digital marketing strategies, professional web development,
-                  and data-driven solutions that deliver real results.
+                  Chúng tôi là TD Agency,chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="text-lg px-8" asChild>
                   <Link href="/services">
-                    Our Services <ArrowRight className="ml-2 h-5 w-5" />
+                    Dịch vụ <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
-                  <Link href="/contact">Get Free Consultation</Link>
+                  <Link href="/contact">Tư vấn miễn phí</Link>
                 </Button>
               </div>
             </div>
@@ -84,17 +112,65 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* About us */}
+      <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center space-y-2">
-                <div className="flex justify-center text-secondary">{stat.icon}</div>
-                <div className="text-3xl font-bold">{stat.value}</div>
-                <div className="text-primary-foreground/80">{stat.label}</div>
+          <div className="text-center space-y-4 mb-16">
+            <Badge variant="secondary" className="w-fit mx-auto">
+              ABOUT US
+            </Badge>
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
+              Chuyên gia Marketing <span className="text-primary">cho ngành Nail</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Giúp các tiệm nail phát triển ổn định, thu hút khách hàng mới và giữ chân khách cũ bằng chiến lược marketing thông minh và hiệu quả.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center space-y-4">
+              <div className="flex justify-center mb-4">
+                <Search className="h-16 w-16 text-primary" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-foreground">Hiểu ngành - Hiểu khách hàng</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Chúng tôi xuất phát từ thực tế ngành nail, hiểu rõ hành vi của khách hàng tại thị trường Pháp và Việt Nam. Nhờ đó, mọi chiến lược marketing đều được thiết kế riêng, sát với nhu cầu thực tế của tiệm nail.
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="flex justify-center mb-4">
+                <Settings className="h-16 w-16 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">Giải pháp toàn diện, dễ áp dụng</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Từ xây dựng thương hiệu, thiết kế website, đến chạy quảng cáo địa phương và quản lý mạng xã hội – bạn có thể chọn dịch vụ trọn gói hoặc từng phần tùy ngân sách. Chúng tôi làm marketing dễ hiểu, dễ triển khai.
+              </p>
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="flex justify-center mb-4">
+                <Heart className="h-16 w-16 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground">Đồng hành và hỗ trợ sát sao</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Không chỉ làm marketing, chúng tôi đồng hành như một người bạn đồng hành kinh doanh. Tư vấn chiến lược, hỗ trợ xử lý vấn đề, và luôn sẵn sàng khi bạn cần – ngay cả sau khi dịch vụ đã hoàn tất.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg p-8 max-w-4xl w-full">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center space-y-2">
+                    <div className="flex justify-center text-primary">{stat.icon}</div>
+                    <div className="text-2xl font-bold text-foreground">{stat.value}</div>
+                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -104,22 +180,25 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <Badge variant="secondary" className="w-fit mx-auto">
-              Our Services
+              OUR SERVICES
             </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Marketing Solutions That Drive Results</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From digital marketing to web development, we offer comprehensive solutions to help your business succeed
-              in the digital landscape.
-            </p>
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Dịch vụ trọn gói của TD Agency</h2>
+                        <div className="max-w-4xl mx-auto space-y-4">
+              <p className="text-xl text-muted-foreground">
+                Tiết kiệm 1-2 giờ mỗi ngày • Tăng thu nhập đột phá • Giảm chi phí $4.000-$6.000
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Trải nghiệm công nghệ mới nhất và giải pháp tiên tiến trong lĩnh vực Merchant & Digital Marketing
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border">
                 <CardHeader className="space-y-4">
-                  <div className="flex items-center justify-between">
+                  <div className="flex justify-start">
                     {service.icon}
-                    <Badge variant="outline">{service.price}</Badge>
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
@@ -133,28 +212,92 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Button size="lg" asChild>
               <Link href="/services">
-                View All Services <ArrowRight className="ml-2 h-5 w-5" />
+                Xem thêm <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
+      {/* Why TD Agency */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-primary uppercase">
+              TẠI SAO NÊN CHỌN TD AGENCY?
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Chúng tôi cung cấp giải pháp trọn gói và đồng bộ nhằm quản lý danh tiếng, tăng doanh thu cho quý khách hàng một cách bền vững, đồng thời xây dựng một hệ thống tự động hoá chăm sóc, kêu gọi khách hàng quay lại sử dụng dịch vụ.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {whyChooseUs.map((item, index) => (
+              <div 
+                key={index} 
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary/5 via-background to-primary/5 border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative p-8 flex flex-col lg:flex-row items-start lg:items-center gap-6">
+                  {/* Left side - Icon and Title */}
+                  <div className="flex-shrink-0 flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:w-80">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative bg-gradient-to-br from-primary to-primary/80 rounded-full p-4 shadow-lg">
+                        {item.icon}
+                      </div>
+                    </div>
+                    
+                    <div className="text-center lg:text-left">
+                      <div className="text-xs font-semibold text-primary/60 uppercase tracking-wider mb-1">
+                        0{index + 1}
+                      </div>
+                      <h3 className="text-xl lg:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  {/* Right side - Features */}
+                  <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {item.features.map((feature, featureIndex) => (
+                      <div 
+                        key={featureIndex} 
+                        className="flex items-start gap-3 p-3 rounded-lg bg-background/50 hover:bg-background/80 transition-all duration-300 group-hover:shadow-md"
+                      >
+                        <div className="flex-shrink-0 mt-1">
+                          <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-primary/70 shadow-sm"></div>
+                        </div>
+                        <p className="text-muted-foreground text-sm leading-relaxed font-medium group-hover:text-foreground transition-colors duration-300">
+                          {feature}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+
       {/* CTA Section */}
       <section className="py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Ready to Grow Your Business?</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Bạn đã sẵn sàng phát triển doanh nghiệp của mình chưa?</h2>
           <p className="text-xl text-muted-foreground">
-            Let's discuss how our marketing expertise can help you achieve your business goals.
+            Hãy cùng thảo luận về cách chuyên gia marketing của chúng tôi có thể giúp bạn đạt được mục tiêu kinh doanh của mình.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8" asChild>
               <Link href="/contact">
-                Start Your Project <ArrowRight className="ml-2 h-5 w-5" />
+                Bắt đầu dự án <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
-              <Link href="/about">Learn More About Us</Link>
+              <Link href="/about">Tìm hiểu thêm</Link>
             </Button>
           </div>
         </div>
