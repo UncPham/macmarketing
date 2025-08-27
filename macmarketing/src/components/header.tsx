@@ -2,11 +2,13 @@
 
 import Link from "next/link"
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const navigation = [
     { name: "Trang chủ", href: "/" },
@@ -16,6 +18,10 @@ export function Header() {
     { name: "Tin tức", href: "/news" },
     { name: "Liên hệ", href: "/contact" },
   ]
+
+  const isActive = (href: string) => {
+    return pathname === href
+  }
 
   return (
     <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 shadow-sm">
@@ -31,17 +37,28 @@ export function Header() {
 
           {/* Desktop Navigation - Center Right */}
           <nav className="hidden md:block absolute left-1/3 transform translate-x-30">
-            {navigation.map((item, index) => (
-            <Link
-                key={item.name}
-                href={item.href}
-                className="relative px-6 py-3 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/10 hover:shadow-lg hover:scale-105 group"
-            >
-                <span className="relative z-10">{item.name}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-            </Link>
-            ))}
+            {navigation.map((item, index) => {
+              const active = isActive(item.href)
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative px-6 py-3 text-sm font-semibold transition-all duration-300 rounded-xl hover:shadow-lg hover:scale-105 group ${
+                    active 
+                      ? 'text-primary bg-primary/10 shadow-md' 
+                      : 'text-foreground/80 hover:text-foreground hover:bg-white/10'
+                  }`}
+                >
+                  <span className="relative z-10">{item.name}</span>
+                  <div className={`absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl transition-opacity duration-300 ${
+                    active ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                  }`}></div>
+                  <div className={`absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full transition-all duration-300 ${
+                    active ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                  }`}></div>
+                </Link>
+              )
+            })}
           </nav>
 
           {/* Mobile menu button */}
@@ -56,17 +73,26 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-border/50 shadow-xl">
             <div className="px-4 py-6 space-y-2">
-              {navigation.map((item, index) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-6 py-4 text-lg font-semibold text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 rounded-xl group relative overflow-hidden"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="relative z-10">{item.name}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </Link>
-              ))}
+              {navigation.map((item, index) => {
+                const active = isActive(item.href)
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`block px-6 py-4 text-lg font-semibold transition-all duration-300 rounded-xl group relative overflow-hidden ${
+                      active 
+                        ? 'text-primary bg-primary/10 shadow-md border-l-4 border-primary' 
+                        : 'text-foreground hover:text-primary hover:bg-primary/10'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="relative z-10">{item.name}</span>
+                    <div className={`absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent transition-opacity duration-300 ${
+                      active ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    }`}></div>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         )}
