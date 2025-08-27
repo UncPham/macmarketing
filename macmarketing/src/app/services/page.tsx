@@ -1,220 +1,552 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Globe, Search, Smartphone, BarChart3, Palette, ShoppingCart, Mail, Users } from "lucide-react"
+import { Check, X } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesPage() {
-  const services = [
+  const websiteServices = [
     {
-      icon: <Globe className="h-12 w-12 text-primary" />,
-      title: "Website & App Development",
-      description:
-        "Professional website and mobile app development with modern design, responsive layouts, and optimized performance.",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Mobile-First"],
-      price: "From $29/month",
+      feature: "Thời gian thực hiện",
+      silver: "1 tuần",
+      gold: "2 tuần",
+      platinum: "4 tuần",
+      details: "Thiết kế website chuyên nghiệp"
     },
     {
-      icon: <Search className="h-12 w-12 text-primary" />,
-      title: "SEO Optimization",
-      description:
-        "Improve your search engine rankings and drive organic traffic with our comprehensive SEO strategies.",
-      features: ["Keyword Research", "On-Page SEO", "Technical SEO", "Link Building"],
-      price: "From $79/month",
+      feature: "Hosting và tên miền website",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Bao gồm hosting và domain"
     },
     {
-      icon: <Smartphone className="h-12 w-12 text-primary" />,
-      title: "Social Media Marketing",
-      description:
-        "Build your brand presence across social media platforms with engaging content and strategic campaigns.",
-      features: ["Content Creation", "Community Management", "Paid Advertising", "Analytics"],
-      price: "From $68/month",
+      feature: "Viết bài giới thiệu và thiết kế web theo yêu cầu hoặc theo bộ nhận diện thương hiệu",
+      silver: "$99 ONE TIME\npredefined content",
+      gold: "$199 ONE TIME\ncustomized content as requested",
+      platinum: "$299 ONE TIME\ncustomized content as requested + UNIQUE content",
+      hasPinkBg: true
     },
     {
-      icon: <BarChart3 className="h-12 w-12 text-primary" />,
-      title: "Digital Analytics",
-      description:
-        "Track and analyze your digital marketing performance with detailed insights and actionable recommendations.",
-      features: ["Performance Tracking", "Custom Reports", "ROI Analysis", "Data Visualization"],
-      price: "From $99/month",
+      feature: "Quản trị và duy trì website",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Dịch vụ quản trị website"
     },
     {
-      icon: <Palette className="h-12 w-12 text-primary" />,
-      title: "Branding & Design",
-      description: "Create a strong brand identity with professional logo design, brand guidelines, and visual assets.",
-      features: ["Logo Design", "Brand Guidelines", "Marketing Materials", "Visual Identity"],
-      price: "From $199/project",
+      feature: "Liến kết các good review từ các mạng xã hội",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Quảng bá trực tuyến"
     },
     {
-      icon: <ShoppingCart className="h-12 w-12 text-primary" />,
-      title: "E-commerce Solutions",
-      description:
-        "Build and optimize online stores that convert visitors into customers with seamless shopping experiences.",
-      features: ["Store Setup", "Payment Integration", "Inventory Management", "Conversion Optimization"],
-      price: "From $299/project",
+      feature: "Tạo menu trực tuyến qua QR code",
+      silver: false,
+      gold: true,
+      platinum: true,
+      details: "Tạo nội dung chuyên nghiệp"
     },
     {
-      icon: <Mail className="h-12 w-12 text-primary" />,
-      title: "Email Marketing",
-      description:
-        "Engage your audience with targeted email campaigns that drive conversions and build customer loyalty.",
-      features: ["Campaign Design", "List Management", "Automation", "A/B Testing"],
-      price: "From $49/month",
+      feature: "Thông báo lịch hẹn về Email / SMS",
+      silver: false,
+      gold: false,
+      platinum: true,
+      details: "Website thương mại điện tử"
     },
     {
-      icon: <Users className="h-12 w-12 text-primary" />,
-      title: "Consulting Services",
-      description:
-        "Get expert advice on your marketing strategy with personalized consulting sessions and strategic planning.",
-      features: ["Strategy Planning", "Market Analysis", "Competitor Research", "Growth Planning"],
-      price: "From $150/hour",
+      feature: "Tạo lịch hẹn / order và thanh toán trực tuyến",
+      silver: false,
+      gold: false,
+      platinum: true,
+      details: "Thiết kế logo và email marketing"
+    },
+    {
+      feature: "Tạo, Bán, và Quản lý Gift Card Online",
+      silver: false,
+      gold: false,
+      platinum: true,
+      details: "Chiến dịch quảng cáo chuyên nghiệp"
     },
   ]
 
-  const packages = [
+  const digitalServices = [
     {
-      name: "Starter",
-      price: "$299",
-      description: "Perfect for small businesses getting started",
-      features: ["Basic Website Setup", "SEO Optimization", "Social Media Setup", "Monthly Reports", "Email Support"],
+      feature: "MIỄN PHÍ tạo tài khoản social media chuyên nghiệp (nếu cần)",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Tạo tài khoản miễn phí"
     },
     {
-      name: "Professional",
-      price: "$599",
-      description: "Ideal for growing businesses",
-      features: [
-        "Advanced Website",
-        "Comprehensive SEO",
-        "Social Media Management",
-        "Email Marketing",
-        "Analytics Dashboard",
-        "Priority Support",
-      ],
-      popular: true,
+      feature: "Hỗ trợ cập nhật thông tin tiệm theo yêu cầu (hình ảnh, dịch vụ, giá cả, thời gian mở cửa, số phone, email,...) không giới hạn",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Cập nhật thông tin không giới hạn"
     },
     {
-      name: "Enterprise",
-      price: "$999",
-      description: "For established businesses seeking growth",
-      features: [
-        "Custom Development",
-        "Advanced SEO & PPC",
-        "Multi-Platform Marketing",
-        "Marketing Automation",
-        "Dedicated Account Manager",
-        "24/7 Support",
-      ],
+      feature: "Quản lý tài khoản Facebook, Instagram, Google & Yelp chuyên nghiệp với những nội dung thu hút",
+      silver: "32 bài/tháng",
+      gold: "48 bài/tháng",
+      platinum: "60 bài/tháng",
+      details: "Quản lý đa nền tảng"
     },
+    {
+      feature: "Cam kết tiếp cận lượng khách hàng tiềm năng qua Facebook",
+      silver: "1,000 người",
+      gold: "3,000 người",
+      platinum: "5,000 người",
+      details: "Tiếp cận khách hàng tiềm năng"
+    },
+    {
+      feature: "Theo dõi và trả lời những đánh giá từ thời điểm bắt đầu dịch vụ marketing trên Google Business để giữ thứ hạng đánh giá cao cho doanh nghiệp.",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Quản lý đánh giá Google Business"
+    },
+    {
+      feature: "Bảo vệ tài khoản Google khỏi những đánh giá giá từ đối thủ",
+      silver: false,
+      gold: true,
+      platinum: true,
+      details: "Bảo vệ tài khoản Google"
+    },
+    {
+      feature: "Tạo video quảng cáo mỗi tháng",
+      silver: false,
+      gold: "1 video",
+      platinum: "2 video",
+      details: "Video quảng cáo hàng tháng"
+    },
+    {
+      feature: "Báo cáo hoạt động hàng tháng",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Báo cáo định kỳ"
+    },
+    {
+      feature: "Vận hành bởi đội ngũ lâu năm, chuyên nghiệp",
+      silver: true,
+      gold: true,
+      platinum: true,
+      details: "Đội ngũ chuyên nghiệp"
+    }
+  ]
+
+  const seoWebServices = [
+    {
+      feature: "Viết nội dung, thiết kế hình ảnh thu hút, chuẩn SEO đăng tải lên website",
+      tier1: true,
+      tier2: true,
+      tier3: true,
+      details: "Content SEO cho website"
+    },
+    {
+      feature: "Từ khóa lên top: Nails Salon near me, Nail salon + zip code, Nails salon + tên thành phố, Nails salon + tên con đường/ khu vực...",
+      tier1: "1-2 từ khóa lên top 10 trang nhất Google",
+      tier2: "1-3 từ khóa lên top 5 trang nhất Google",
+      tier3: "1-3 từ khóa lên top 3 trang nhất Google",
+      details: "Tối ưu từ khóa"
+    }
+  ]
+
+  const seoMapServices = [
+    {
+      feature: "Đảm bảo nội dung Google Page tiệm, hấp dẫn khách hàng tới tiệm",
+      tier3: true,
+      details: "Tối ưu Google Business Profile"
+    },
+    {
+      feature: "Từ khóa lên top: Nail Salon /Manicure /Pedicure near me, Nail salon /Manicure /Pedicure + zip code, Nail salon /Manicure /Pedicure + tên thành phố",
+      tier3: "1-3 từ khóa lên top 3 trang nhất Google MAP",
+      details: "Tối ưu từ khóa Google Maps"
+    }
+  ]
+
+  const additionalServices = [
+    {
+      service: "Thiết kế Logo",
+      price: "$100 - $200",
+      description: "Thiết kế logo chuyên nghiệp cho thương hiệu"
+    },
+    {
+      service: "Video quảng cáo (bao marketing)",
+      price: "$500 - $1,000",
+      description: "Sản xuất video quảng cáo chất lượng cao"
+    },
+    {
+      service: "Dịch vụ bán Logo",
+      price: "Thỏa thuận",
+      description: "Dịch vụ thiết kế logo theo yêu cầu"
+    }
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ backgroundColor: '#EFEEEA' }}>
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-card">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
-            <Badge variant="secondary" className="w-fit mx-auto">
-              Our Services
-            </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">
-              <span className="text-primary">Marketing Services</span>
-              <br />
-              That Drive Results
+            <div className="flex items-center justify-center mb-8">
+            </div>
+            <h1 className="text-4xl lg:text-5xl font-bold" style={{ color: '#273F4F' }}>
+              PRICING TABLE FOR
+              <span className="block mt-2" style={{ color: '#FE7743' }}>NAIL SALON</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              From digital marketing to web development, we offer comprehensive solutions to help your business succeed
-              in the digital landscape.
-            </p>
+            <div className="flex justify-center mt-8">
+              <div 
+                className="w-24 h-1 rounded-full"
+                style={{ backgroundColor: '#FE7743' }}
+              ></div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border">
-                <CardHeader className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    {service.icon}
-                    <Badge variant="outline">{service.price}</Badge>
+      {/* Website Design Services */}
+      <section className="py-16" style={{ backgroundColor: '#EFEEEA' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            {/* Header */}
+            <div className="text-white p-6" style={{ backgroundColor: '#273F4F' }}>
+              <div className="flex justify-between items-center">
+                <h2 className="text-2xl font-bold">WEBSITE DESIGN</h2>
+                <div 
+                  className="text-sm font-medium px-4 py-2 rounded-lg"
+                  style={{ backgroundColor: '#FE7743' }}
+                >
+                  MARKETING SERVICES<br/>1 STEP SUPPORT
+                </div>
+              </div>
+            </div>
+
+            {/* Pricing Headers */}
+            <div className="grid grid-cols-4" style={{ backgroundColor: '#EFEEEA' }}>
+              <div className="p-4"></div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+                <div className="font-bold text-lg">SILVER</div>
+                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$59</div>
+                <div className="text-sm mt-1">per month</div>
+              </div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
+                <div className="font-bold text-lg">GOLD</div>
+                <div className="text-3xl font-bold mt-2">$69</div>
+                <div className="text-sm mt-1">per month</div>
+              </div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+                <div className="font-bold text-lg">PLATINUM</div>
+                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$79</div>
+                <div className="text-sm mt-1">per month</div>
+              </div>
+            </div>
+
+            {/* Features */}
+            {websiteServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="grid grid-cols-4 border-b hover:shadow-md transition-all duration-200"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              >
+                <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-4 text-center">
+                  {typeof service.silver === 'boolean' ? (
+                    service.silver ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-sm font-medium" style={{ color: '#273F4F' }}>{service.silver}</span>
+                  )}
+                </div>
+                <div className="p-4 text-center">
+                  {typeof service.gold === 'boolean' ? (
+                    service.gold ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-sm font-medium" style={{ color: '#273F4F' }}>{service.gold}</span>
+                  )}
+                </div>
+                <div className="p-4 text-center">
+                  {typeof service.platinum === 'boolean' ? (
+                    service.platinum ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-sm font-medium" style={{ color: '#273F4F' }}>{service.platinum}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            {/* Additional Info */}
+            <div className="p-6" style={{ backgroundColor: '#EFEEEA' }}>
+              <div style={{ color: '#273F4F' }}>
+                <div className="font-bold mb-3 text-lg" style={{ color: '#FE7743' }}>Add-on: QR code for Collecting review $99/year</div>
+                <div className="font-bold mb-3 text-lg" style={{ color: '#FE7743' }}>Special</div>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
+                    $299 for website only + $99/year for maintenance
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
+                    $99 OFF Setup Fee & 50% OFF website package with merchant account
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
+                    $99/year + $99 OFF Setup fee website combo merchant account + digital marketing + SEO
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
+                    To qualify for free web design, monthly plan of Silver or Higher is required.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Digital Package */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            {/* Header */}
+            <div className="text-white p-6" style={{ backgroundColor: '#FE7743' }}>
+              <div className="flex justify-between items-center">
+                <h2 className="text-2xl font-bold">DIGITAL PACKAGE</h2>
+                <div 
+                  className="text-sm font-medium px-4 py-2 rounded-lg"
+                  style={{ backgroundColor: '#273F4F' }}
+                >
+                  MARKETING SERVICES<br/>1 STEP SUPPORT
+                </div>
+              </div>
+            </div>
+
+            {/* Pricing Headers */}
+            <div className="grid grid-cols-4" style={{ backgroundColor: '#EFEEEA' }}>
+              <div className="p-4"></div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+                <div className="font-bold text-lg">EAGLE</div>
+                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$119</div>
+                <div className="text-sm mt-1">per month</div>
+              </div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
+                <div className="font-bold text-lg">CLOUD</div>
+                <div className="text-3xl font-bold mt-2">$199</div>
+                <div className="text-sm mt-1">per month</div>
+              </div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+                <div className="font-bold text-lg">STAR</div>
+                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$299</div>
+                <div className="text-sm mt-1">per month</div>
+              </div>
+            </div>
+
+            {/* Features */}
+            {digitalServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="grid grid-cols-4 border-b hover:shadow-md transition-all duration-200"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              >
+                <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-4 text-center">
+                  {typeof service.silver === 'boolean' ? (
+                    service.silver ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-sm font-medium" style={{ color: '#273F4F' }}>{service.silver}</span>
+                  )}
+                </div>
+                <div className="p-4 text-center">
+                  {typeof service.gold === 'boolean' ? (
+                    service.gold ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-sm font-medium" style={{ color: '#273F4F' }}>{service.gold}</span>
+                  )}
+                </div>
+                <div className="p-4 text-center">
+                  {typeof service.platinum === 'boolean' ? (
+                    service.platinum ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-sm font-medium" style={{ color: '#273F4F' }}>{service.platinum}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            {/* Payment Info */}
+            <div className="p-6" style={{ backgroundColor: '#EFEEEA' }}>
+              <div style={{ color: '#273F4F' }}>
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Note:</div>
+                    <div className="text-sm mb-3">Minimum 3-month payment is required at the start of service</div>
+                    <div className="font-semibold mb-2" style={{ color: '#273F4F' }}>Optional One Time Payment Service:</div>
+                    <div className="text-sm">$99 for professional social media account only (Facebook, Google & Instagram)</div>
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription className="leading-relaxed">{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-sm text-muted-foreground">{feature}</span>
-                      </div>
-                    ))}
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Note:</div>
+                    <div className="text-sm">FLAG package does not include Yelp Management. Package also requires minimum 12 Months of service payment.</div>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="bg-white p-4 rounded-lg shadow-sm">
+                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Note:</div>
+                    <div className="text-sm">To maximize the result and getting significant number of new customers to your salon, Mac USA Marketing recommends daily budget ads from $10 to $15.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Web Services */}
+      <section className="py-16" style={{ backgroundColor: '#EFEEEA' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            {/* Header */}
+            <div className="text-white p-6" style={{ backgroundColor: '#273F4F' }}>
+              <div className="flex justify-between items-center">
+                <h2 className="text-2xl font-bold">DỊCH VỤ SEO WEB</h2>
+                <div 
+                  className="text-sm font-medium px-4 py-2 rounded-lg"
+                  style={{ backgroundColor: '#FE7743' }}
+                >
+                  1 ZIPCODE - 1 CUSTOMER! 1 STEP SUPPORT
+                </div>
+              </div>
+            </div>
+
+            {/* Pricing Headers */}
+            <div className="grid grid-cols-4" style={{ backgroundColor: '#EFEEEA' }}>
+              <div className="p-4"></div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+                <div className="font-bold text-lg">TOP 10</div>
+                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$79</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
+              </div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
+                <div className="font-bold text-lg">TOP 5</div>
+                <div className="text-3xl font-bold mt-2">$139</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
+              </div>
+              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+                <div className="font-bold text-lg">TOP 3</div>
+                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$299+</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
+              </div>
+            </div>
+
+            {/* Features */}
+            {seoWebServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="grid grid-cols-4 border-b hover:shadow-md transition-all duration-200"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              >
+                <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-4 text-center">
+                  {typeof service.tier1 === 'boolean' ? (
+                    service.tier1 ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier1}</span>
+                  )}
+                </div>
+                <div className="p-4 text-center">
+                  {typeof service.tier2 === 'boolean' ? (
+                    service.tier2 ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier2}</span>
+                  )}
+                </div>
+                <div className="p-4 text-center">
+                  {typeof service.tier3 === 'boolean' ? (
+                    service.tier3 ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier3}</span>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Packages */}
-      <section className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Marketing Packages</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Choose the perfect package for your business needs and budget.
-            </p>
-          </div>
+      {/* SEO Map Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            {/* Header */}
+            <div className="text-white p-6" style={{ backgroundColor: '#FE7743' }}>
+              <div className="flex justify-between items-center">
+                <h2 className="text-2xl font-bold">DỊCH VỤ SEO MAP</h2>
+                <div 
+                  className="text-sm font-medium px-4 py-2 rounded-lg"
+                  style={{ backgroundColor: '#273F4F' }}
+                >
+                  1 ZIPCODE - 1 CUSTOMER! 1 STEP SUPPORT
+                </div>
+              </div>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <Card key={index} className={`relative border-border ${pkg.popular ? "ring-2 ring-primary" : ""}`}>
-                {pkg.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2">Most Popular</Badge>
-                )}
-                <CardHeader className="text-center space-y-4">
-                  <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                  <div className="space-y-2">
-                    <div className="text-4xl font-bold text-primary">{pkg.price}</div>
-                    <CardDescription>{pkg.description}</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <ul className="space-y-3">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant={pkg.popular ? "default" : "outline"} asChild>
-                    <Link href="/contact">Get Started</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+            {/* Single Pricing Header */}
+            <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
+              <div className="text-3xl font-bold">TOP 3 $ 299</div>
+              <div className="text-lg mt-2">mỗi tháng</div>
+            </div>
+
+            {/* Features */}
+            {seoMapServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="grid grid-cols-2 border-b hover:shadow-md transition-all duration-200"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              >
+                <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-4 text-center">
+                  {typeof service.tier3 === 'boolean' ? (
+                    service.tier3 ? <Check className="w-6 h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-6 h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier3}</span>
+                  )}
+                </div>
+              </div>
             ))}
+
+            {/* Payment Note */}
+            <div className="p-6" style={{ backgroundColor: '#EFEEEA' }}>
+              <div style={{ color: '#273F4F' }}>
+                <div className="text-sm">
+                  <span className="font-bold" style={{ color: '#FE7743' }}>NOTE:</span> Thanh toán trước tối thiểu 6 tháng. Mac Marketing hoàn trả 100% chi phí nếu trong vòng 6 tháng không đạt cam kết.<br/>
+                  <span className="font-bold" style={{ color: '#273F4F' }}>Sau 6 tháng, Mac Marketing gợi ý quy khách giữ service để giữ được thứ hạng với ưu đãi 20% off giá phía trên.</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold">Ready to Get Started?</h2>
-          <p className="text-xl text-primary-foreground/90">
-            Contact us today for a free consultation and let's discuss your marketing needs.
-          </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
-            <Link href="/contact">Get Free Consultation</Link>
-          </Button>
+      {/* Additional Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+            {/* Contact Info */}
+            <div className="p-8" style={{ backgroundColor: '#273F4F' }}>
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-white mb-3">Liên hệ ngay để được tư vấn!</h3>
+                <p className="text-lg text-white mb-6">Chúng tôi cam kết mang lại hiệu quả tốt nhất cho salon của bạn</p>
+                <Button 
+                  className="px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  style={{ backgroundColor: '#FE7743', color: 'white' }}
+                  asChild
+                >
+                  <Link href="/contact">Liên hệ ngay</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
