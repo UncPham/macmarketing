@@ -18,25 +18,29 @@ export function Header() {
   ]
 
   return (
-    <header className="bg-background border-b border-border sticky top-0 z-50">
+    <header className="bg-background/95 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">TD</div>
-            <span className="font-bold text-xl text-foreground">AGENCY</span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground px-4 py-2 rounded-xl font-bold text-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+              TD
+            </div>
+            <span className="font-bold text-2xl text-foreground group-hover:text-primary transition-colors duration-300">AGENCY</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
+          {/* Desktop Navigation - Center Right */}
+          <nav className="hidden md:block absolute left-1/3 transform translate-x-30">
+            {navigation.map((item, index) => (
+            <Link
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </Link>
+                className="relative px-6 py-3 text-sm font-semibold text-foreground/80 hover:text-foreground transition-all duration-300 rounded-xl hover:bg-white/10 hover:shadow-lg hover:scale-105 group"
+            >
+                <span className="relative z-10">{item.name}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+            </Link>
             ))}
           </nav>
 
@@ -50,16 +54,17 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
-              {navigation.map((item) => (
+          <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-border/50 shadow-xl">
+            <div className="px-4 py-6 space-y-2">
+              {navigation.map((item, index) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  className="block px-6 py-4 text-lg font-semibold text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 rounded-xl group relative overflow-hidden"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.name}
+                  <span className="relative z-10">{item.name}</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
               ))}
             </div>

@@ -23,22 +23,27 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
+                  Giới thiệu
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Services
+                  Dịch vụ
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources" className="text-muted-foreground hover:text-primary transition-colors">
+                  Tài nguyên
                 </Link>
               </li>
               <li>
                 <Link href="/news" className="text-muted-foreground hover:text-primary transition-colors">
-                  News
+                  Tin tức
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                  Liên hệ
                 </Link>
               </li>
             </ul>
@@ -49,16 +54,16 @@ export function Footer() {
             <h3 className="font-semibold text-foreground">Services</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-muted-foreground">Digital Marketing</span>
+                <span className="text-muted-foreground">Xây dựng Website & App</span>
               </li>
               <li>
-                <span className="text-muted-foreground">SEO Optimization</span>
+                <span className="text-muted-foreground">SEO - Search Engine Marketing</span>
               </li>
               <li>
                 <span className="text-muted-foreground">Social Media Marketing</span>
               </li>
               <li>
-                <span className="text-muted-foreground">Web Development</span>
+                <span className="text-muted-foreground">Hệ thống bán hàng</span>
               </li>
             </ul>
           </div>
@@ -77,7 +82,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground text-sm">info@macmarketing.com</span>
+                <span className="text-muted-foreground text-sm">info@tdagency.com</span>
               </div>
             </div>
 
@@ -97,7 +102,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-muted-foreground text-sm">© 2024 MAC Marketing. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">© 2025 TD Agency. All rights reserved.</p>
         </div>
       </div>
     </footer>
