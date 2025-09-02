@@ -1,3 +1,5 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -5,8 +7,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Users, Target, TrendingUp, Award, Globe, Smartphone, Search, BarChart3, Heart, Settings } from "lucide-react"
 import Link from "next/link"
+import { useState, useEffect } from "react"
 
 export default function HomePage() {
+  // Slideshow state
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  
+  // Array of images for slideshow
+  const images = [
+    "/professional-marketing-team-working-on-laptops-and.png",
+    "/blue-geometric-pattern.jpg",
+    "/professional-marketing-team-working-on-laptops-and.png", // Placeholder - thay bằng ảnh thật
+    "/blue-geometric-pattern.jpg" // Placeholder - thay bằng ảnh thật
+  ]
+  
+  // Auto-change images every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 5000)
+    
+    return () => clearInterval(interval)
+  }, [images.length])
+
   const services = [
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
@@ -75,20 +98,51 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-card to-background py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       <section 
+        className="relative bg-gradient-to-br from-card to-background py-20 lg:py-32"
+        style={{
+          backgroundColor: '#1e3480', // Nền xanh đậm giống ảnh
+          backgroundImage: `
+            /* Hình thoi đỏ */
+            radial-gradient(ellipse 8px 8px at 15% 20%, #ef4444 0%, #ef4444 50%, transparent 50%),
+            radial-gradient(ellipse 6px 6px at 85% 15%, #ef4444 0%, #ef4444 50%, transparent 50%),
+            radial-gradient(ellipse 7px 7px at 25% 85%, #ef4444 0%, #ef4444 50%, transparent 50%),
+            radial-gradient(ellipse 8px 8px at 75% 90%, #ef4444 0%, #ef4444 50%, transparent 50%),
+            
+            /* Hình thoi xanh lá */
+            radial-gradient(ellipse 6px 6px at 45% 25%, #10b981 0%, #10b981 50%, transparent 50%),
+            radial-gradient(ellipse 8px 8px at 65% 75%, #10b981 0%, #10b981 50%, transparent 50%),
+            radial-gradient(ellipse 7px 7px at 35% 60%, #10b981 0%, #10b981 50%, transparent 50%),
+            
+            /* Hình thoi vàng */
+            radial-gradient(ellipse 7px 7px at 90% 35%, #f59e0b 0%, #f59e0b 50%, transparent 50%),
+            radial-gradient(ellipse 6px 6px at 10% 75%, #f59e0b 0%, #f59e0b 50%, transparent 50%),
+            
+            /* Vòng tròn xanh dương nhạt */
+            radial-gradient(circle 4px at 20% 45%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
+            radial-gradient(circle 5px at 80% 25%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
+            radial-gradient(circle 4px at 55% 15%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
+            radial-gradient(circle 3px at 30% 70%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
+            radial-gradient(circle 4px at 70% 55%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
+            radial-gradient(circle 5px at 85% 80%, #60a5fa 0%, #60a5fa 100%, transparent 100%)
+          `,
+          backgroundSize: '100% 100%'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-900/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge variant="secondary" className="w-fit">
+                <Badge variant="secondary" className="w-fit bg-white/70 text-gray-800 border border-white/20">
                   Professional Marketing Solutions
                 </Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
                   <span className="text-primary">TD AGENCY</span>
                   <br />
                   Giải pháp marketing chuyên biệt cho ngành Nail
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-xl text-white/90 leading-relaxed">
                   Chúng tôi là TD Agency,chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
                 </p>
               </div>
@@ -99,14 +153,41 @@ export default function HomePage() {
                     Dịch vụ <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent" asChild>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
                   <Link href="/contact">Tư vấn miễn phí</Link>
                 </Button>
               </div>
             </div>
 
-            <div className="relative">
-              <img src="/professional-marketing-team-working-on-laptops-and.png" alt="MAC Marketing Team" className="rounded-lg shadow-2xl" />
+            <div className="relative overflow-hidden rounded-lg shadow-2xl">
+              {/* Slideshow container */}
+              <div className="relative w-full h-[400px] lg:h-[500px]">
+                {images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Marketing Team ${index + 1}`}
+                    className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+                
+                {/* Dots indicator */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex 
+                          ? 'bg-white shadow-lg' 
+                          : 'bg-white/50 hover:bg-white/70'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
