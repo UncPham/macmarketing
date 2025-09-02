@@ -221,7 +221,7 @@ export default function ServicesPage() {
                 <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>WEBSITE DESIGN</h2>
                 <div 
                   className="text-sm font-medium px-4 py-2 rounded-lg text-white"
-                  style={{ backgroundColor: '#273F4F' }}
+                  style={{ backgroundColor: '#6B9F65' }}
                 >
                   DỊCH VỤ MARKETING HỖ TRỢ 1 BƯỚC
                 </div>
@@ -229,7 +229,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4 gap-2 p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-4 gap-2 p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-4"></div>
               <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <div className="font-bold text-lg">SILVER</div>
@@ -321,7 +321,7 @@ export default function ServicesPage() {
                 <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>DIGITAL PACKAGE</h2>
                 <div 
                   className="text-sm font-medium px-4 py-2 rounded-lg text-white"
-                  style={{ backgroundColor: '#273F4F' }}
+                  style={{ backgroundColor: '#7BB5D9' }}
                 >
                   DỊCH VỤ MARKETING HỖ TRỢ 1 BƯỚC
                 </div>
@@ -329,7 +329,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4 gap-2 p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-4 gap-2 p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-4"></div>
               <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <div className="font-bold text-lg">EAGLE</div>
@@ -417,7 +417,7 @@ export default function ServicesPage() {
                 <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>DỊCH VỤ SEO WEB</h2>
                 <div 
                   className="text-sm font-medium px-4 py-2 rounded-lg text-white"
-                  style={{ backgroundColor: '#273F4F' }}
+                  style={{ backgroundColor: '#6D5A85' }}
                 >
                   1 ZIPCODE - 1 KHÁCH HÀNG! HỖ TRỢ 1 BƯỚC
                 </div>
@@ -425,7 +425,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4 gap-2 p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-4 gap-2 p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-4"></div>
               <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <div className="font-bold text-lg">TOP 10</div>
@@ -491,7 +491,7 @@ export default function ServicesPage() {
                 <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>DỊCH VỤ SEO MAP</h2>
                 <div 
                   className="text-sm font-medium px-4 py-2 rounded-lg text-white"
-                  style={{ backgroundColor: '#273F4F' }}
+                  style={{ backgroundColor: '#CC5C5C' }}
                 >
                   1 ZIPCODE - 1 KHÁCH HÀNG! HỖ TRỢ 1 BƯỚC
                 </div>
@@ -499,7 +499,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Single Pricing Header */}
-            <div className="p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
                 <div className="text-3xl font-bold">TOP 3 $ 299</div>
                 <div className="text-lg mt-2">mỗi tháng</div>
