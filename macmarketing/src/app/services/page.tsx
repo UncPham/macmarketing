@@ -23,9 +23,9 @@ export default function ServicesPage() {
     },
     {
       feature: "Viết bài giới thiệu và thiết kế web theo yêu cầu hoặc theo bộ nhận diện thương hiệu",
-      silver: "$99 ONE TIME\npredefined content",
-      gold: "$199 ONE TIME\ncustomized content as requested",
-      platinum: "$299 ONE TIME\ncustomized content as requested + UNIQUE content",
+      silver: "$99 MỘT LẦN\nnội dung có sẵn",
+      gold: "$199 MỘT LẦN\nnội dung tùy chỉnh theo yêu cầu",
+      platinum: "$299 MỘT LẦN\nnội dung tùy chỉnh theo yêu cầu + nội dung ĐỘC QUYỀN",
       hasPinkBg: true
     },
     {
@@ -191,16 +191,16 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-white">
+      <section className="py-1 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-8">
-            <div className="flex items-center justify-center mb-8">
+          <div className="text-center space-y-6">
+            <div className="flex items-center justify-center mb-6">
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold" style={{ color: '#273F4F' }}>
               PRICING TABLE FOR
               <span className="block mt-2" style={{ color: '#FE7743' }}>NAIL SALON</span>
             </h1>
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-6">
               <div 
                 className="w-24 h-1 rounded-full"
                 style={{ backgroundColor: '#FE7743' }}
@@ -211,48 +211,49 @@ export default function ServicesPage() {
       </section>
 
       {/* Website Design Services */}
-      <section className="py-16" style={{ backgroundColor: '#EFEEEA' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl shadow-2xl p-6" style={{ backgroundColor: '#A3DC9A' }}>
+            <div className="bg-white rounded-xl overflow-hidden" style={{ backgroundColor: '#A3DC9A' }}>
             {/* Header */}
-            <div className="text-white p-6" style={{ backgroundColor: '#273F4F' }}>
+            <div className="text-white p-6" style={{ backgroundColor: '#A3DC9A' }}>
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold">WEBSITE DESIGN</h2>
+                <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>WEBSITE DESIGN</h2>
                 <div 
-                  className="text-sm font-medium px-4 py-2 rounded-lg"
-                  style={{ backgroundColor: '#FE7743' }}
+                  className="text-sm font-medium px-4 py-2 rounded-lg text-white"
+                  style={{ backgroundColor: '#273F4F' }}
                 >
-                  MARKETING SERVICES<br/>1 STEP SUPPORT
+                  DỊCH VỤ MARKETING HỖ TRỢ 1 BƯỚC
                 </div>
               </div>
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-4 gap-2 p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-4"></div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <div className="font-bold text-lg">SILVER</div>
-                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$59</div>
-                <div className="text-sm mt-1">per month</div>
+                <div className="text-3xl font-bold mt-2">$59</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
               </div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
                 <div className="font-bold text-lg">GOLD</div>
                 <div className="text-3xl font-bold mt-2">$69</div>
-                <div className="text-sm mt-1">per month</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
               </div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
                 <div className="font-bold text-lg">PLATINUM</div>
-                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$79</div>
-                <div className="text-sm mt-1">per month</div>
+                <div className="text-3xl font-bold mt-2">$79</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
               </div>
             </div>
 
             {/* Features */}
             {websiteServices.map((service, index) => (
-              <div 
-                key={index} 
-                className="grid grid-cols-4 border-b hover:shadow-md transition-all duration-200"
-                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              <div
+                key={index}
+                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
                 <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
                 <div className="p-4 text-center">
@@ -282,75 +283,77 @@ export default function ServicesPage() {
             {/* Additional Info */}
             <div className="p-6" style={{ backgroundColor: '#EFEEEA' }}>
               <div style={{ color: '#273F4F' }}>
-                <div className="font-bold mb-3 text-lg" style={{ color: '#FE7743' }}>Add-on: QR code for Collecting review $99/year</div>
-                <div className="font-bold mb-3 text-lg" style={{ color: '#FE7743' }}>Special</div>
+                <div className="font-bold mb-3 text-lg" style={{ color: '#FE7743' }}>Tiện ích thêm: QR code thu thập đánh giá $99/năm</div>
+                <div className="font-bold mb-3 text-lg" style={{ color: '#FE7743' }}>Đặc biệt</div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start">
                     <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
-                    $299 for website only + $99/year for maintenance
+                    $299 chỉ riêng website + $99/năm bảo trì
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
-                    $99 OFF Setup Fee & 50% OFF website package with merchant account
+                    Giảm $99 phí cài đặt & giảm 50% gói website khi có merchant account
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
-                    $99/year + $99 OFF Setup fee website combo merchant account + digital marketing + SEO
+                    $99/năm + giảm $99 phí cài đặt khi combo website + merchant account + digital marketing + SEO
                   </li>
                   <li className="flex items-start">
                     <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: '#FE7743' }}></div>
-                    To qualify for free web design, monthly plan of Silver or Higher is required.
+                    Để được thiết kế web miễn phí, cần đăng ký gói tháng Silver hoặc cao hơn.
                   </li>
                 </ul>
               </div>
             </div>
+            </div>{/* end inner card */}
           </div>
         </div>
       </section>
 
       {/* Digital Package */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl shadow-2xl p-6" style={{ backgroundColor: '#C6E7FF' }}>
+            <div className="bg-white rounded-xl overflow-hidden border-gray-100" style={{ backgroundColor: '#C6E7FF' }}>
             {/* Header */}
-            <div className="text-white p-6" style={{ backgroundColor: '#FE7743' }}>
+            <div className="text-white p-6" style={{ backgroundColor: '#C6E7FF' }}>
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold">DIGITAL PACKAGE</h2>
+                <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>DIGITAL PACKAGE</h2>
                 <div 
-                  className="text-sm font-medium px-4 py-2 rounded-lg"
+                  className="text-sm font-medium px-4 py-2 rounded-lg text-white"
                   style={{ backgroundColor: '#273F4F' }}
                 >
-                  MARKETING SERVICES<br/>1 STEP SUPPORT
+                  DỊCH VỤ MARKETING HỖ TRỢ 1 BƯỚC
                 </div>
               </div>
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-4 gap-2 p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-4"></div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <div className="font-bold text-lg">EAGLE</div>
-                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$119</div>
-                <div className="text-sm mt-1">per month</div>
+                <div className="text-3xl font-bold mt-2">$119</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
               </div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
                 <div className="font-bold text-lg">CLOUD</div>
                 <div className="text-3xl font-bold mt-2">$199</div>
-                <div className="text-sm mt-1">per month</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
               </div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
                 <div className="font-bold text-lg">STAR</div>
-                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$299</div>
-                <div className="text-sm mt-1">per month</div>
+                <div className="text-3xl font-bold mt-2">$299</div>
+                <div className="text-sm mt-1">mỗi tháng</div>
               </div>
             </div>
 
             {/* Features */}
             {digitalServices.map((service, index) => (
-              <div 
-                key={index} 
-                className="grid grid-cols-4 border-b hover:shadow-md transition-all duration-200"
-                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              <div
+                key={index}
+                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
                 <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
                 <div className="p-4 text-center">
@@ -378,73 +381,75 @@ export default function ServicesPage() {
             ))}
 
             {/* Payment Info */}
-            <div className="p-6" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="p-4" style={{ backgroundColor: '#EFEEEA' }}>
               <div style={{ color: '#273F4F' }}>
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Note:</div>
-                    <div className="text-sm mb-3">Minimum 3-month payment is required at the start of service</div>
-                    <div className="font-semibold mb-2" style={{ color: '#273F4F' }}>Optional One Time Payment Service:</div>
-                    <div className="text-sm">$99 for professional social media account only (Facebook, Google & Instagram)</div>
+                <div className="grid gap-4 md:grid-cols-3">
+                  <div className="bg-white p-4 rounded-lg shadow-sm h-full">
+                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Lưu ý:**</div>
+                    <div className="text-sm mb-3">Cần thanh toán tối thiểu 3 tháng ngay khi bắt đầu dịch vụ.</div>
+                    <div className="font-semibold mb-2" style={{ color: '#273F4F' }}>Dịch vụ thanh toán một lần (tuỳ chọn):</div>
+                    <div className="text-sm">$99 chỉ để tạo tài khoản mạng xã hội chuyên nghiệp (Facebook, Google & Instagram)</div>
                   </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Note:</div>
-                    <div className="text-sm">FLAG package does not include Yelp Management. Package also requires minimum 12 Months of service payment.</div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm h-full">
+                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Lưu ý:**</div>
+                    <div className="text-sm">Gói FLAG không bao gồm quản lý Yelp. Gói yêu cầu thanh toán tối thiểu 12 tháng dịch vụ.</div>
                   </div>
-                  <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Note:</div>
-                    <div className="text-sm">To maximize the result and getting significant number of new customers to your salon, Mac USA Marketing recommends daily budget ads from $10 to $15.</div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm h-full">
+                    <div className="font-bold mb-2" style={{ color: '#FE7743' }}>**Lưu ý:**</div>
+                    <div className="text-sm">Để đạt hiệu quả tối đa và thu hút nhiều khách hàng mới, Mac USA Marketing khuyến nghị ngân sách quảng cáo hằng ngày từ $10 đến $15.</div>
                   </div>
                 </div>
               </div>
             </div>
+            </div>{/* end inner card */}
           </div>
         </div>
       </section>
 
       {/* SEO Web Services */}
-      <section className="py-16" style={{ backgroundColor: '#EFEEEA' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl shadow-2xl p-6" style={{ backgroundColor: '#9B7EBD' }}>
+            <div className="bg-white rounded-xl overflow-hidden border-gray-100" style={{ backgroundColor: '#9B7EBD' }}>
             {/* Header */}
-            <div className="text-white p-6" style={{ backgroundColor: '#273F4F' }}>
+            <div className="text-white p-6" style={{ backgroundColor: '#9B7EBD' }}>
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold">DỊCH VỤ SEO WEB</h2>
+                <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>DỊCH VỤ SEO WEB</h2>
                 <div 
-                  className="text-sm font-medium px-4 py-2 rounded-lg"
-                  style={{ backgroundColor: '#FE7743' }}
+                  className="text-sm font-medium px-4 py-2 rounded-lg text-white"
+                  style={{ backgroundColor: '#273F4F' }}
                 >
-                  1 ZIPCODE - 1 CUSTOMER! 1 STEP SUPPORT
+                  1 ZIPCODE - 1 KHÁCH HÀNG! HỖ TRỢ 1 BƯỚC
                 </div>
               </div>
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-4 gap-2 p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-4"></div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <div className="font-bold text-lg">TOP 10</div>
-                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$79</div>
+                <div className="text-3xl font-bold mt-2">$79</div>
                 <div className="text-sm mt-1">mỗi tháng</div>
               </div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
                 <div className="font-bold text-lg">TOP 5</div>
                 <div className="text-3xl font-bold mt-2">$139</div>
                 <div className="text-sm mt-1">mỗi tháng</div>
               </div>
-              <div className="text-white p-6 text-center" style={{ backgroundColor: '#273F4F' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
                 <div className="font-bold text-lg">TOP 3</div>
-                <div className="text-3xl font-bold mt-2" style={{ color: '#FE7743' }}>$299+</div>
+                <div className="text-3xl font-bold mt-2">$299+</div>
                 <div className="text-sm mt-1">mỗi tháng</div>
               </div>
             </div>
 
             {/* Features */}
             {seoWebServices.map((service, index) => (
-              <div 
-                key={index} 
-                className="grid grid-cols-4 border-b hover:shadow-md transition-all duration-200"
-                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              <div
+                key={index}
+                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
                 <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
                 <div className="p-4 text-center">
@@ -470,39 +475,43 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
+            </div>{/* end inner card */}
           </div>
         </div>
       </section>
 
       {/* SEO Map Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl shadow-2xl p-6" style={{ backgroundColor: '#FF8A8A' }}>
+            <div className="bg-white rounded-xl overflow-hidden border-gray-100" style={{ backgroundColor: '#FF8A8A' }}>
             {/* Header */}
-            <div className="text-white p-6" style={{ backgroundColor: '#FE7743' }}>
+            <div className="text-white p-6" style={{ backgroundColor: '#FF8A8A' }}>
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold">DỊCH VỤ SEO MAP</h2>
+                <h2 className="text-2xl font-bold" style={{ color: '#273F4F' }}>DỊCH VỤ SEO MAP</h2>
                 <div 
-                  className="text-sm font-medium px-4 py-2 rounded-lg"
+                  className="text-sm font-medium px-4 py-2 rounded-lg text-white"
                   style={{ backgroundColor: '#273F4F' }}
                 >
-                  1 ZIPCODE - 1 CUSTOMER! 1 STEP SUPPORT
+                  1 ZIPCODE - 1 KHÁCH HÀNG! HỖ TRỢ 1 BƯỚC
                 </div>
               </div>
             </div>
 
             {/* Single Pricing Header */}
-            <div className="text-white p-6 text-center" style={{ backgroundColor: '#FE7743' }}>
-              <div className="text-3xl font-bold">TOP 3 $ 299</div>
-              <div className="text-lg mt-2">mỗi tháng</div>
+            <div className="p-2 rounded-lg" style={{ backgroundColor: '#EFEEEA' }}>
+              <div className="text-white p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
+                <div className="text-3xl font-bold">TOP 3 $ 299</div>
+                <div className="text-lg mt-2">mỗi tháng</div>
+              </div>
             </div>
 
             {/* Features */}
             {seoMapServices.map((service, index) => (
-              <div 
-                key={index} 
-                className="grid grid-cols-2 border-b hover:shadow-md transition-all duration-200"
-                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EFEEEA', borderColor: '#EFEEEA' }}
+              <div
+                key={index}
+                className="grid grid-cols-2 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
                 <div className="p-4 text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
                 <div className="p-4 text-center">
@@ -524,13 +533,14 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
+            </div>{/* end inner card */}
           </div>
         </div>
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 bg-white" >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
             {/* Contact Info */}
             <div className="p-8" style={{ backgroundColor: '#273F4F' }}>
