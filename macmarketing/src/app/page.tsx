@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Users, Target, TrendingUp, Award, Globe, Smartphone, Search, BarChart3, Heart, Settings } from "lucide-react"
+import { ArrowRight, Users, Target, TrendingUp, Award, Globe, Smartphone, Search, BarChart3, Heart, Settings, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -29,6 +29,17 @@ export default function HomePage() {
     
     return () => clearInterval(interval)
   }, [images.length])
+
+  // Navigation functions
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    )
+  }
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+  }
 
   const services = [
     {
@@ -99,9 +110,9 @@ export default function HomePage() {
 
       {/* Hero Section */}
        <section 
-        className="relative bg-gradient-to-br from-card to-background py-20 lg:py-32"
+        className="relative bg-gradient-to-br from-card to-background pt-10 pb-20 lg:pt-20 lg:pb-60"
         style={{
-          backgroundColor: '#1e3480', // Nền xanh đậm giống ảnh
+          backgroundColor: '#1e3480',
           backgroundImage: `
             /* Hình thoi đỏ */
             radial-gradient(ellipse 8px 8px at 15% 20%, #ef4444 0%, #ef4444 50%, transparent 50%),
@@ -142,18 +153,18 @@ export default function HomePage() {
                   <br />
                   Giải pháp marketing chuyên biệt cho ngành Nail
                 </h1>
-                <p className="text-xl text-white/90 leading-relaxed">
-                  Chúng tôi là TD Agency,chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
+                <p className="hidden sm:block text-xl text-white/90 leading-relaxed">
+                  Chúng tôi là TD Agency, chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8" asChild>
+              <div className="flex flex-row gap-4">
+                <Button size="lg" className="text-lg px-8 rounded-full" asChild>
                   <Link href="/services">
                     Dịch vụ <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-white/10 border-white/30 text-white hover:bg-white/20 rounded-full" asChild>
                   <Link href="/contact">Tư vấn miễn phí</Link>
                 </Button>
               </div>
@@ -173,19 +184,26 @@ export default function HomePage() {
                   />
                 ))}
                 
-                {/* Dots indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                  {images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentImageIndex 
-                          ? 'bg-white shadow-lg' 
-                          : 'bg-white/50 hover:bg-white/70'
-                      }`}
-                    />
-                  ))}
+                {/* Navigation Arrows */}
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+
+                {/* Image counter */}
+                <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
+                  {currentImageIndex + 1} / {images.length}
                 </div>
               </div>
             </div>
@@ -265,10 +283,10 @@ export default function HomePage() {
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Dịch vụ trọn gói của TD Agency</h2>
                         <div className="max-w-4xl mx-auto space-y-4">
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-foreground">
                 Tiết kiệm 1-2 giờ mỗi ngày • Tăng thu nhập đột phá • Giảm chi phí $4.000-$6.000
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-foreground">
                 Trải nghiệm công nghệ mới nhất và giải pháp tiên tiến trong lĩnh vực Merchant & Digital Marketing
               </p>
             </div>
@@ -325,13 +343,13 @@ export default function HomePage() {
                   <div className="flex-shrink-0 flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:w-80">
                     <div className="relative">
                       <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                      <div className="relative bg-gradient-to-br from-primary to-primary/80 rounded-full p-4 shadow-lg">
+                      <div className="relative bg-gradient-to-br from-primary to-primary/10 rounded-full p-4 shadow-lg">
                         {item.icon}
                       </div>
                     </div>
                     
                     <div className="text-center lg:text-left">
-                      <div className="text-xs font-semibold text-primary/60 uppercase tracking-wider mb-1">
+                      <div className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
                         0{index + 1}
                       </div>
                       <h3 className="text-xl lg:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
@@ -350,7 +368,7 @@ export default function HomePage() {
                         <div className="flex-shrink-0 mt-1">
                           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-primary/70 shadow-sm"></div>
                         </div>
-                        <p className="text-muted-foreground text-sm leading-relaxed font-medium group-hover:text-foreground transition-colors duration-300">
+                        <p className="text-foreground text-base leading-relaxed font-medium group-hover:text-primary transition-colors duration-300">
                           {feature}
                         </p>
                       </div>
