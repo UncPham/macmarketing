@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -9,61 +10,51 @@ import Link from "next/link"
 export default function NewsPage() {
   const articles = [
     {
-      title: "MAC Marketing Enters Strategic Partnership With TINCOM MEDIA For New Feature",
-      excerpt:
-        "We're excited to announce our new strategic partnership that will bring innovative marketing solutions to our clients.",
-      image: "/business-partnership-handshake-in-modern-office.png",
-      date: "March 19, 2024",
-      author: "MAC Marketing Team",
-      category: "Partnership",
-    },
-    {
-      title: "Cryptocurrency Amy Phan Was Helped Vietnamese American Filmmakers",
-      excerpt:
-        "Learn how we helped Vietnamese American filmmakers leverage cryptocurrency and digital marketing for their projects.",
-      image: "/cryptocurrency-and-film-industry-collaboration.png",
-      date: "March 1, 2024",
-      author: "Amy Phan",
-      category: "Case Study",
-    },
-    {
-      title: "Sao Marketing và Biztech Robotics Ký Hợp Tác Chiến Lược",
-      excerpt:
-        "Strategic partnership announcement between Sao Marketing and Biztech Robotics for innovative marketing solutions.",
-      image: "/robotics-and-marketing-technology-partnership.png",
-      date: "January 15, 2024",
-      author: "Business Development",
-      category: "Partnership",
-    },
-    {
-      title: "Digital Marketing Trends for 2024: What Businesses Need to Know",
-      excerpt: "Explore the latest digital marketing trends and strategies that will shape the industry in 2024.",
-      image: "/digital-marketing-trends-2024-charts-and-graphs.png",
-      date: "December 28, 2023",
-      author: "Marketing Team",
-      category: "Industry Insights",
-    },
-    {
-      title: "How SEO Can Transform Your Business Growth",
-      excerpt:
-        "Discover the power of SEO and how it can significantly impact your business's online visibility and growth.",
-      image: "/seo-growth-charts-and-website-analytics.png",
-      date: "December 15, 2023",
-      author: "SEO Specialists",
-      category: "SEO Tips",
-    },
-    {
       title: "Social Media Marketing Best Practices for Small Businesses",
       excerpt:
         "Learn effective social media strategies that can help small businesses build their brand and engage customers.",
       image: "/social-media-marketing-for-small-business.png",
       date: "November 30, 2023",
       author: "Social Media Team",
-      category: "Social Media",
+      url: "https://nailspamarketing.com/social-media-marketing-best-practices.html",
+    },
+    {
+      title: "Polished Nail & Wax tuyển thợ nail tại Myrtle Beach",
+      excerpt:
+        "Tiệm Polished Nail & Wax đang tìm kiếm thợ nail người Việt và người Mỹ để gia nhập đội ngũ của chúng tôi! Yêu Cầu: Có kinh nghiệm, biết...",
+      image: "/polished-nail-wax-tuyen-tho-nail-tai-myrtle-beach.jpg",
+      date: "Tháng 2 15 2024",
+      author: "Shinee",
+      url: "https://nailspamarketing.com/polished-nail-wax-tuyen-tho-nail-tai-myrtle-beach.html",
+    },
+    {
+      title: "Những mẫu menu đẹp cho tiệm nail, spa, nhà hàng cho đầu năm 2025",
+      excerpt:
+        "Menu không chỉ đơn thuần là nơi giới thiệu các dịch vụ mà còn được xem như linh hồn của mỗi tiệm nail, spa hay nhà hàng. Đây là...",
+      image: "/mau_menu_dep.webp",
+      date: "Tháng 12 9 2024",
+      author: "Haley EMs",
+      url: "https://nailspamarketing.com/mau-menu-dep.html",
+    },
+    {
+      title: "Marketing tiệm nail trên Facebook: Cách tăng doanh thu MIỄN PHÍ",
+      excerpt:
+        "Facebook là nền tảng mạng xã hội phổ biến nhất hiện nay với hơn 2,9 tỷ người dùng hoạt động hàng tháng. Trong đó, giới trẻ chiếm tỷ lệ...",
+      image: "/marketing-tiem-nail-tren-facebook.png",
+      date: "Tháng 1 16, 2024",
+      author: "Shinee",
+      url: "https://nailspamarketing.com/marketing-tiem-nail-tren-facebook.html",
+    },
+    {
+      title: "Top các keyword phổ biến trong ngành nails giúp bạn on top Google nhanh chóng",
+      excerpt:
+        "Discover the power of SEO and how it can significantly impact your business's online visibility and growth.",
+      image: "/top-cac-keyword-pho-bien-trong-nganh-nails.png",
+      date: "Tháng 1 12, 2024",
+      author: "Shinee",
+      url: "https://nailspamarketing.com/top-cac-keyword-pho-bien-trong-nganh-nails.html",
     },
   ]
-
-  const categories = ["All", "Partnership", "Case Study", "Industry Insights", "SEO Tips", "Social Media"]
 
   return (
     <div className="min-h-screen bg-background">
@@ -87,64 +78,6 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Categories Filter */}
-      <section className="py-8 bg-background border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category, index) => (
-              <Badge
-                key={index}
-                variant={index === 0 ? "default" : "outline"}
-                className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                {category}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Article */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Featured Article</h2>
-          </div>
-
-          <Card className="overflow-hidden border-border">
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="relative h-64 lg:h-auto">
-                <img
-                  src={articles[0].image || "/placeholder.svg"}
-                  alt={articles[0].title}
-                  className="w-full h-full object-cover"
-                />
-                <Badge className="absolute top-4 left-4">{articles[0].category}</Badge>
-              </div>
-              <div className="p-8 flex flex-col justify-center">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="h-4 w-4" />
-                      <span>{articles[0].date}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <User className="h-4 w-4" />
-                      <span>{articles[0].author}</span>
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground leading-tight">{articles[0].title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{articles[0].excerpt}</p>
-                  <Button className="w-fit">
-                    Read More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
-
       {/* Articles Grid */}
       <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +97,6 @@ export default function NewsPage() {
                     alt={article.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-4 left-4">{article.category}</Badge>
                 </div>
                 <CardHeader className="space-y-3">
                   <div className="flex items-center space-x-4 text-sm text-muted-foreground">
@@ -181,8 +113,10 @@ export default function NewsPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <CardDescription className="leading-relaxed line-clamp-3">{article.excerpt}</CardDescription>
-                  <Button variant="outline" size="sm" className="w-fit bg-transparent">
-                    Read More <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button variant="outline" size="sm" className="w-fit bg-transparent" asChild>
+                    <Link href={article.url} target="_blank" rel="noopener noreferrer">
+                      Read More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -191,19 +125,7 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold">Stay Updated</h2>
-          <p className="text-xl text-primary-foreground/90">
-            Subscribe to our newsletter to get the latest marketing insights and industry news.
-          </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8" asChild>
-            <Link href="/contact">Subscribe Now</Link>
-          </Button>
-        </div>
-      </section>
-
+      <FloatingButtons />
       <Footer />
     </div>
   )

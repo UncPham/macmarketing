@@ -1,188 +1,198 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Check, X } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesPage() {
+  const comboServices = [
+    {
+      feature: "Được sử dụng web báo giá và thống kê cho tiệm nails của Vekmarketing",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Quản lý và bảo trì Website",
+      threeMonths: false,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "SEO Website, Seo Google Maps",
+      threeMonths: "Top 1-10 Google Search",
+      sixMonths: "Top 1-5 Google Search",
+      oneYear: "Top 1-3 Google Search",
+    },
+    {
+      feature: "Giảm thiểu Bad Review Google Map, Planity, Treatwell",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Hỗ trợ quản lý và trả lời đánh giá Google Map",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Quản lý tài khoản mạng xã hội Facebook, Instagram, Tiktok...",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Hỗ trợ tăng Likes và Follows các trang mạng xã hội",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Hỗ trợ chạy quảng cáo trên Facebook, Instagram, Tiktok",
+      threeMonths: false,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Video trình chiếu trên màn hình TV",
+      threeMonths: false,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Thiết kế: Logo, Gift card, Menu, Tờ rơi",
+      threeMonths: false,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "QR Code",
+      threeMonths: false,
+      sixMonths: "5 QR Code",
+      oneYear: "10 QR Code",
+    },
+    {
+      feature: "Tặng bảng QR Collecting Review Linkupnex",
+      threeMonths: false,
+      sixMonths: "5 QR Collecting Review",
+      oneYear: "10 QR Collecting Review",
+    },
+    {
+      feature: "Báo cáo hoạt động hàng tháng",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+  ];
+
   const websiteServices = [
     {
       feature: "Thời gian thực hiện",
-      silver: "1 tuần",
-      gold: "2 tuần",
-      platinum: "4 tuần",
-      details: "Thiết kế website chuyên nghiệp"
-    },
-    {
-      feature: "Hosting và tên miền website",
-      silver: true,
-      gold: true,
-      platinum: true,
-      details: "Bao gồm hosting và domain"
+      silver: "2 tuần",
+      gold: "4 tuần",
     },
     {
       feature: "Viết bài giới thiệu và thiết kế web theo yêu cầu hoặc theo bộ nhận diện thương hiệu",
-      silver: "$99 MỘT LẦN\nnội dung có sẵn",
-      gold: "$199 MỘT LẦN\nnội dung tùy chỉnh theo yêu cầu",
-      platinum: "$299 MỘT LẦN\nnội dung tùy chỉnh theo yêu cầu + nội dung ĐỘC QUYỀN",
-      hasPinkBg: true
+      silver: true,
+      gold: true,
     },
     {
       feature: "Quản trị và duy trì website",
       silver: true,
       gold: true,
-      platinum: true,
-      details: "Dịch vụ quản trị website"
     },
     {
-      feature: "Liến kết các good review từ các mạng xã hội",
+      feature: "Set up Domain & Hosting 1 năm",
       silver: true,
       gold: true,
-      platinum: true,
-      details: "Quảng bá trực tuyến"
+    },
+    {
+      feature: "Liên kết các good review từ các mạng xã hội",
+      silver: true,
+      gold: true,
     },
     {
       feature: "Tạo menu trực tuyến qua QR code",
-      silver: false,
+      silver: true,
       gold: true,
-      platinum: true,
-      details: "Tạo nội dung chuyên nghiệp"
     },
-    {
-      feature: "Thông báo lịch hẹn về Email / SMS",
-      silver: false,
-      gold: false,
-      platinum: true,
-      details: "Website thương mại điện tử"
-    },
-    {
-      feature: "Tạo lịch hẹn / order và thanh toán trực tuyến",
-      silver: false,
-      gold: false,
-      platinum: true,
-      details: "Thiết kế logo và email marketing"
-    },
-    {
-      feature: "Tạo, Bán, và Quản lý Gift Card Online",
-      silver: false,
-      gold: false,
-      platinum: true,
-      details: "Chiến dịch quảng cáo chuyên nghiệp"
-    },
-  ]
+  ];
+
 
   const digitalServices = [
     {
+      feature: "Giá gói",
+      basic: "149€",
+      premium: "249€",
+    },
+    {
       feature: "MIỄN PHÍ tạo tài khoản social media chuyên nghiệp (nếu cần)",
-      silver: true,
-      gold: true,
-      platinum: true,
-      details: "Tạo tài khoản miễn phí"
+      basic: true,
+      premium: true,
     },
     {
-      feature: "Hỗ trợ cập nhật thông tin tiệm theo yêu cầu (hình ảnh, dịch vụ, giá cả, thời gian mở cửa, số phone, email,...) không giới hạn",
-      silver: true,
-      gold: true,
-      platinum: true,
-      details: "Cập nhật thông tin không giới hạn"
+      feature: "Hỗ trợ cập nhật thông tin tiệm theo yêu cầu (hình ảnh, dịch vụ, giá cả, số phone, email,…) không giới hạn",
+      basic: true,
+      premium: true,
     },
     {
-      feature: "Quản lý tài khoản Facebook, Instagram, Google & Yelp chuyên nghiệp với những nội dung thu hút",
-      silver: "32 bài/tháng",
-      gold: "48 bài/tháng",
-      platinum: "60 bài/tháng",
-      details: "Quản lý đa nền tảng"
+      feature: "Cam kết tiếp cận lượng khách hàng tiềm năng qua Google, Instagram",
+      basic: "3,000 người",
+      premium: "10,000 người",
     },
     {
-      feature: "Cam kết tiếp cận lượng khách hàng tiềm năng qua Facebook",
-      silver: "1,000 người",
-      gold: "3,000 người",
-      platinum: "5,000 người",
-      details: "Tiếp cận khách hàng tiềm năng"
+      feature: "Quản lý tài khoản Facebook, Instagram, Google chuyên nghiệp với những nội dung thu hút",
+      basic: "16 bài/tháng",
+      premium: "48 bài/tháng",
     },
     {
-      feature: "Theo dõi và trả lời những đánh giá từ thời điểm bắt đầu dịch vụ marketing trên Google Business để giữ thứ hạng đánh giá cao cho doanh nghiệp.",
-      silver: true,
-      gold: true,
-      platinum: true,
-      details: "Quản lý đánh giá Google Business"
+      feature: "Buff Likes và Follows các trang mạng xã hội (nếu cần)",
+      basic: true,
+      premium: true,
     },
     {
-      feature: "Bảo vệ tài khoản Google khỏi những đánh giá giá từ đối thủ",
-      silver: false,
-      gold: true,
-      platinum: true,
-      details: "Bảo vệ tài khoản Google"
+      feature: "Tối ưu Google Map, Ads Google Top 1-3 Google Map",
+      basic: true,
+      premium: true,
     },
     {
-      feature: "Tạo video quảng cáo mỗi tháng",
-      silver: false,
-      gold: "1 video",
-      platinum: "2 video",
-      details: "Video quảng cáo hàng tháng"
+      feature: "Giảm thiểu Bad Review Google Map, Planity, Treatwell",
+      basic: true,
+      premium: true,
     },
     {
       feature: "Báo cáo hoạt động hàng tháng",
-      silver: true,
-      gold: true,
-      platinum: true,
-      details: "Báo cáo định kỳ"
+      basic: true,
+      premium: true,
     },
-    {
-      feature: "Vận hành bởi đội ngũ lâu năm, chuyên nghiệp",
-      silver: true,
-      gold: true,
-      platinum: true,
-      details: "Đội ngũ chuyên nghiệp"
-    }
-  ]
-
-  const seoWebServices = [
-    {
-      feature: "Viết nội dung, thiết kế hình ảnh thu hút, chuẩn SEO đăng tải lên website",
-      tier1: true,
-      tier2: true,
-      tier3: true,
-      details: "Content SEO cho website"
-    },
-    {
-      feature: "Từ khóa lên top: Nails Salon near me, Nail salon + zip code, Nails salon + tên thành phố, Nails salon + tên con đường/ khu vực...",
-      tier1: "1-2 từ khóa lên top 10 trang nhất Google",
-      tier2: "1-3 từ khóa lên top 5 trang nhất Google",
-      tier3: "1-3 từ khóa lên top 3 trang nhất Google",
-      details: "Tối ưu từ khóa"
-    }
-  ]
+  ];
 
   const seoMapServices = [
     {
       feature: "Đảm bảo nội dung Google Page tiệm, hấp dẫn khách hàng tới tiệm",
       tier3: true,
-      details: "Tối ưu Google Business Profile"
     },
     {
       feature: "Từ khóa lên top: Nail Salon /Manicure /Pedicure near me, Nail salon /Manicure /Pedicure + zip code, Nail salon /Manicure /Pedicure + tên thành phố",
-      tier3: "1-3 từ khóa lên top 3 trang nhất Google MAP",
-      details: "Tối ưu từ khóa Google Maps"
+      tier3: "lên top 3 trang nhất Google MAP",
+    },
+    {
+      feature: "Hỗ trợ trả lời Review Google Map	",
+      tier3: true,
     }
   ]
 
   const additionalServices = [
     {
-      service: "Thiết kế Logo",
-      price: "$100 - $200",
-      description: "Thiết kế logo chuyên nghiệp cho thương hiệu"
+      service: "Video trình chiếu trên màn hình TV",
+      price: "Chỉ từ 50€",
     },
     {
-      service: "Video quảng cáo (bao marketing)",
-      price: "$500 - $1,000",
-      description: "Sản xuất video quảng cáo chất lượng cao"
-    },
-    {
-      service: "Dịch vụ bán Logo",
-      price: "Thỏa thuận",
-      description: "Dịch vụ thiết kế logo theo yêu cầu"
+      service: "Thiết kế Logo, Gift card, Menu, Tờ rơi	",
+      price: "Chỉ từ 20€",
     }
   ]
 
@@ -210,6 +220,100 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Combo Services */}
+      <section className="py-4 sm:py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#FFD700' }}>
+            <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden" style={{ backgroundColor: '#FFD700' }}>
+            {/* Header */}
+            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#FFD700' }}>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>COMBO SERVICES</h2>
+                <div 
+                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  style={{ backgroundColor: '#DAA520' }}
+                >
+                  1 ZIPCODE - 1 KHÁCH HÀNG
+                </div>
+              </div>
+            </div>
+
+            {/* Pricing Headers */}
+            <div className="grid grid-cols-4 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
+              <div className="p-2 sm:p-4"></div>
+              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <div className="font-bold text-xs sm:text-sm md:text-lg">3 THÁNG</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">499€</div>
+              </div>
+              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
+                <div className="font-bold text-xs sm:text-sm md:text-lg">6 THÁNG</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">799€</div>
+              </div>
+              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
+                <div className="font-bold text-xs sm:text-sm md:text-lg">1 NĂM</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">1.299€</div>
+              </div>
+            </div>
+
+            {/* Features */}
+            {comboServices.map((service, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
+              >
+                <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-2 sm:p-4 text-center">
+                  {typeof service.threeMonths === 'boolean' ? (
+                    service.threeMonths ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.threeMonths}</span>
+                  )}
+                </div>
+                <div className="p-2 sm:p-4 text-center">
+                  {typeof service.sixMonths === 'boolean' ? (
+                    service.sixMonths ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.sixMonths}</span>
+                  )}
+                </div>
+                <div className="p-2 sm:p-4 text-center">
+                  {typeof service.oneYear === 'boolean' ? (
+                    service.oneYear ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                  ) : (
+                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.oneYear}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Additional Info */}
+            <div className="p-3 sm:p-6" style={{ backgroundColor: '#EFEEEA' }}>
+              <div style={{ color: '#273F4F' }}>
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Website: từ 100€</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Các loại QR Code: QR code đặt lịch hẹn (Booking QR), QR Code Menu, QR code mạng xã hội, QR code ưu đãi/khuyến mãi, QR code phản hồi/đánh giá</span>
+                  </li>
+                </ul>
+                <div className="font-bold mt-2 mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Lưu ý</div>
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng mới đáng kể đến tiệm của bạn,
+VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </div>{/* end inner card */}
+          </div>
+        </div>
+      </section>
+
       {/* Website Design Services */}
       <section className="py-4 sm:py-8 bg-white">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -223,28 +327,23 @@ export default function ServicesPage() {
                   className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#6B9F65' }}
                 >
-                  DỊCH VỤ MARKETING HỖ TRỢ 1 BƯỚC
+                  1 ZIPCODE - 1 KHÁCH HÀNG
                 </div>
               </div>
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-3 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-2 sm:p-4"></div>
               <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 <div className="font-bold text-xs sm:text-sm md:text-lg">SILVER</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$59</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">299€</div>
+                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
               </div>
               <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
                 <div className="font-bold text-xs sm:text-sm md:text-lg">GOLD</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$69</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
-              </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">PLATINUM</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$79</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">599€</div>
+                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
               </div>
             </div>
 
@@ -252,7 +351,7 @@ export default function ServicesPage() {
             {websiteServices.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
                 <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
@@ -270,37 +369,21 @@ export default function ServicesPage() {
                     <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.gold}</span>
                   )}
                 </div>
-                <div className="p-2 sm:p-4 text-center">
-                  {typeof service.platinum === 'boolean' ? (
-                    service.platinum ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
-                  ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.platinum}</span>
-                  )}
-                </div>
               </div>
             ))}
 
             {/* Additional Info */}
             <div className="p-3 sm:p-6" style={{ backgroundColor: '#EFEEEA' }}>
               <div style={{ color: '#273F4F' }}>
-                <div className="font-bold mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Tiện ích thêm: QR code thu thập đánh giá $99/năm</div>
-                <div className="font-bold mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Đặc biệt</div>
+                <div className="font-bold mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Lưu ý</div>
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>$299 chỉ riêng website + $99/năm bảo trì</span>
+                    <span>Website: từ 100€</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Giảm $99 phí cài đặt & giảm 50% gói website khi có merchant account</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>$99/năm + giảm $99 phí cài đặt khi combo website + merchant account + digital marketing + SEO</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Để được thiết kế web miễn phí, cần đăng ký gói tháng Silver hoặc cao hơn.</span>
+                    <span>Hosting: từ 10€/ tháng</span>
                   </li>
                 </ul>
               </div>
@@ -323,28 +406,23 @@ export default function ServicesPage() {
                   className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#7BB5D9' }}
                 >
-                  DỊCH VỤ MARKETING HỖ TRỢ 1 BƯỚC
+                  1 ZIPCODE - 1 KHÁCH HÀNG
                 </div>
               </div>
             </div>
 
             {/* Pricing Headers */}
-            <div className="grid grid-cols-4 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="grid grid-cols-3 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
               <div className="p-2 sm:p-4"></div>
               <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">EAGLE</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$119</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
+                <div className="font-bold text-xs sm:text-sm md:text-lg">BASIC</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">149€</div>
+                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
               </div>
               <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">CLOUD</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$199</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
-              </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">STAR</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$299</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
+                <div className="font-bold text-xs sm:text-sm md:text-lg">PREMIUM</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">249€</div>
+                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
               </div>
             </div>
 
@@ -352,129 +430,40 @@ export default function ServicesPage() {
             {digitalServices.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
                 <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
                 <div className="p-2 sm:p-4 text-center">
-                  {typeof service.silver === 'boolean' ? (
-                    service.silver ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                  {typeof service.basic === 'boolean' ? (
+                    service.basic ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.silver}</span>
+                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.basic}</span>
                   )}
                 </div>
                 <div className="p-2 sm:p-4 text-center">
-                  {typeof service.gold === 'boolean' ? (
-                    service.gold ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                  {typeof service.premium === 'boolean' ? (
+                    service.premium ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.gold}</span>
-                  )}
-                </div>
-                <div className="p-2 sm:p-4 text-center">
-                  {typeof service.platinum === 'boolean' ? (
-                    service.platinum ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
-                  ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.platinum}</span>
+                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.premium}</span>
                   )}
                 </div>
               </div>
             ))}
 
             {/* Payment Info */}
-            <div className="p-2 sm:p-4" style={{ backgroundColor: '#EFEEEA' }}>
+            <div className="p-3 sm:p-6" style={{ backgroundColor: '#EFEEEA' }}>
               <div style={{ color: '#273F4F' }}>
-                <div className="grid gap-2 sm:gap-4 md:grid-cols-3">
-                  <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm h-full">
-                    <div className="font-bold mb-1 sm:mb-2 text-sm sm:text-base" style={{ color: '#FE7743' }}>**Lưu ý:**</div>
-                    <div className="text-xs sm:text-sm mb-2 sm:mb-3">Cần thanh toán tối thiểu 3 tháng ngay khi bắt đầu dịch vụ.</div>
-                    <div className="font-semibold mb-1 sm:mb-2 text-xs sm:text-sm" style={{ color: '#273F4F' }}>Dịch vụ thanh toán một lần (tuỳ chọn):</div>
-                    <div className="text-xs sm:text-sm">$99 chỉ để tạo tài khoản mạng xã hội chuyên nghiệp (Facebook, Google & Instagram)</div>
-                  </div>
-                  <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm h-full">
-                    <div className="font-bold mb-1 sm:mb-2 text-sm sm:text-base" style={{ color: '#FE7743' }}>**Lưu ý:**</div>
-                    <div className="text-xs sm:text-sm">Gói FLAG không bao gồm quản lý Yelp. Gói yêu cầu thanh toán tối thiểu 12 tháng dịch vụ.</div>
-                  </div>
-                  <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm h-full">
-                    <div className="font-bold mb-1 sm:mb-2 text-sm sm:text-base" style={{ color: '#FE7743' }}>**Lưu ý:**</div>
-                    <div className="text-xs sm:text-sm">Để đạt hiệu quả tối đa và thu hút nhiều khách hàng mới, Mac USA Marketing khuyến nghị ngân sách quảng cáo hằng ngày từ $10 đến $15.</div>
-                  </div>
-                </div>
+                <div className="font-bold mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Lưu ý</div>
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng 
+mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span>
+                  </li>
+                </ul>
               </div>
             </div>
-            </div>{/* end inner card */}
-          </div>
-        </div>
-      </section>
-
-      {/* SEO Web Services */}
-      <section className="py-4 sm:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#9B7EBD' }}>
-            <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden border-gray-100" style={{ backgroundColor: '#9B7EBD' }}>
-            {/* Header */}
-            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#9B7EBD' }}>
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>DỊCH VỤ SEO WEB</h2>
-                <div 
-                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
-                  style={{ backgroundColor: '#6D5A85' }}
-                >
-                  1 ZIPCODE - 1 KHÁCH HÀNG! HỖ TRỢ 1 BƯỚC
-                </div>
-              </div>
-            </div>
-
-            {/* Pricing Headers */}
-            <div className="grid grid-cols-4 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
-              <div className="p-2 sm:p-4"></div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">TOP 10</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$79</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
-              </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">TOP 5</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$139</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
-              </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">TOP 3</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">$299+</div>
-                <div className="text-xs sm:text-sm mt-1">mỗi tháng</div>
-              </div>
-            </div>
-
-            {/* Features */}
-            {seoWebServices.map((service, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
-                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
-              >
-                <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-2 sm:p-4 text-center">
-                  {typeof service.tier1 === 'boolean' ? (
-                    service.tier1 ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
-                  ) : (
-                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier1}</span>
-                  )}
-                </div>
-                <div className="p-2 sm:p-4 text-center">
-                  {typeof service.tier2 === 'boolean' ? (
-                    service.tier2 ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
-                  ) : (
-                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier2}</span>
-                  )}
-                </div>
-                <div className="p-2 sm:p-4 text-center">
-                  {typeof service.tier3 === 'boolean' ? (
-                    service.tier3 ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
-                  ) : (
-                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier3}</span>
-                  )}
-                </div>
-              </div>
-            ))}
             </div>{/* end inner card */}
           </div>
         </div>
@@ -527,10 +516,19 @@ export default function ServicesPage() {
             {/* Payment Note */}
             <div className="p-3 sm:p-6" style={{ backgroundColor: '#EFEEEA' }}>
               <div style={{ color: '#273F4F' }}>
-                <div className="text-xs sm:text-sm">
-                  <span className="font-bold" style={{ color: '#FE7743' }}>NOTE:</span> Thanh toán trước tối thiểu 6 tháng. Mac Marketing hoàn trả 100% chi phí nếu trong vòng 6 tháng không đạt cam kết.<br/>
-                  <span className="font-bold" style={{ color: '#273F4F' }}>Sau 6 tháng, Mac Marketing gợi ý quy khách giữ service để giữ được thứ hạng với ưu đãi 20% off giá phía trên.</span>
-                </div>
+                <div className="font-bold mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Lưu ý</div>
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Thanh toán trước tối thiểu 3 tháng. VekMarketing hoàn trả 100% chi phí nếu trong vòng 3 tháng không đạt cam kết.
+Sau 6 tháng, VekMarketing gợi ý quý khách giữ service để giữ được thứ hạng với ưu đãi 20% off giá phía trên.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng mới đáng kể đến tiệm của bạn, VekMarketing 
+khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span>
+                  </li>
+                </ul>
               </div>
             </div>
             </div>{/* end inner card */}
@@ -539,6 +537,46 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services */}
+      <section className="py-4 sm:py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#90E0EF' }}>
+            <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden" style={{ backgroundColor: '#90E0EF' }}>
+            {/* Header */}
+            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#90E0EF' }}>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>ADDITIONAL SERVICES</h2>
+                <div 
+                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  style={{ backgroundColor: '#5BACBF' }}
+                >
+                  DỊCH VU BỔ SUNG / SẢN PHẨM
+                </div>
+              </div>
+            </div>
+
+            {/* Features List */}
+            {additionalServices.map((service, index) => (
+              <div
+                key={index}
+                className="border-b transition-colors duration-150 hover:bg-[#F1F5F9] p-3 sm:p-4"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
+              >
+                <div className="flex justify-between items-center">
+                  <div className="text-xs sm:text-sm font-medium flex-1" style={{ color: '#273F4F' }}>{service.service}</div>
+                  <div className="ml-4 text-center">
+                    <span className="text-xs sm:text-sm font-bold px-2 py-1 rounded" style={{ backgroundColor: '#FE7743', color: 'white' }}>
+                      {service.price}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+            </div>{/* end inner card */}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
       <section className="py-4 sm:py-8 bg-white" >
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl overflow-hidden border border-gray-100">
@@ -560,6 +598,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <FloatingButtons />
       <Footer />
     </div>
   )

@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -7,29 +8,6 @@ import { Users, Target, Award, Globe } from "lucide-react"
 import Link from "next/link"
 
 export default function AboutPage() {
-  const team = [
-    {
-      name: "John Smith",
-      role: "CEO & Founder",
-      image: "/professional-ceo-headshot-male-in-suit.png",
-    },
-    {
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      image: "/professional-marketing-director-headshot-female.png",
-    },
-    {
-      name: "Mike Chen",
-      role: "Technical Lead",
-      image: "/professional-technical-lead-headshot-male.png",
-    },
-    {
-      name: "Emily Davis",
-      role: "Creative Director",
-      image: "/professional-creative-director-headshot-female.png",
-    },
-  ]
-
   const values = [
     {
       icon: <Target className="h-8 w-8 text-primary" />,
@@ -58,16 +36,27 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-20 lg:py-32"
+        style={{
+          backgroundImage: `url('/imgi_106_hand-holding-smartphone-social-media-concept-2048x1365.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
-            <Badge variant="secondary" className="w-fit mx-auto">
-              About TD Agency
-            </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground">
+            {/* <Badge variant="secondary" className="w-fit mx-auto bg-white/10 text-white border-white/20">
+              About Vekmarketing
+            </Badge> */}
+            <h1 className="text-4xl lg:text-6xl font-bold text-white">
               Chuyên gia Marketing <span className="text-primary">cho ngành Nail</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Với hơn 10 năm kinh nghiệm trong lĩnh vực marketing cho ngành nail, chúng tôi đã giúp hàng trăm tiệm nail
               phát triển thương hiệu và đạt được mục tiêu kinh doanh thông qua các chiến lược sáng tạo và giải pháp hiệu quả.
             </p>
@@ -83,7 +72,7 @@ export default function AboutPage() {
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Câu chuyện của chúng tôi</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  TD Agency được thành lập với niềm tin rằng mỗi tiệm nail đều xứng đáng có được sự thành công. Chúng tôi bắt đầu
+                  Vekmarketing được thành lập với niềm tin rằng mỗi tiệm nail đều xứng đáng có được sự thành công. Chúng tôi bắt đầu
                   với sứ mệnh đơn giản: giúp các tiệm nail phát triển bền vững thông qua các chiến lược marketing hiệu quả.
                 </p>
                 <p>
@@ -98,7 +87,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <img src="/marketing-agency-office-with-team-collaboration-an.png" alt="TD Agency Office" className="rounded-lg shadow-lg" />
+              <img src="/imgi_106_hand-holding-smartphone-social-media-concept-2048x1365.jpg" alt="Vekmarketing Office" className="rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -143,6 +132,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <FloatingButtons />
       <Footer />
     </div>
   )

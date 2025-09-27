@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,10 +16,10 @@ export default function HomePage() {
   
   // Array of images for slideshow
   const images = [
-    "/professional-marketing-team-working-on-laptops-and.png",
-    "/blue-geometric-pattern.jpg",
-    "/professional-marketing-team-working-on-laptops-and.png", // Placeholder - thay bằng ảnh thật
-    "/blue-geometric-pattern.jpg" // Placeholder - thay bằng ảnh thật
+    "/imgi_106_hand-holding-smartphone-social-media-concept-2048x1365.jpg",
+    "/imgi_69_49263271-2048x1138.png",
+    "/imgi_20_horizontal-photo-group-creative-designers-working-project-together-computer-modern-office-1920x1079.jpg", 
+    "/imgi_3_Free-Website-Presentation-Mockup-PSD.jpg" // Placeholder - thay bằng ảnh thật
   ]
   
   // Auto-change images every 5 seconds
@@ -45,22 +46,22 @@ export default function HomePage() {
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
       title: "Xây dựng Website & App",
-      description: "TD Agency thiết kế và phát triển website, app phù hợp với bộ nhận diện và sở thích của từng khách hàng. Đồng thời đáp ứng được tiêu chuẩn SEO của Google, chúng tôi bảo đảm website của Quý vị được sử dụng trên tất cả các thiết bị công nghệ.",
+      description: "Vekmarketing thiết kế và phát triển website, app phù hợp với bộ nhận diện và sở thích của từng khách hàng. Đồng thời đáp ứng được tiêu chuẩn SEO của Google, chúng tôi bảo đảm website của Quý vị được sử dụng trên tất cả các thiết bị công nghệ.",
     },
     {
       icon: <Search className="h-8 w-8 text-primary" />,
       title: "SEO - Search Engine Marketing",
-      description: "Mỗi Zipcode, TD Agency cam kết chỉ phục vụ duy nhất 1 khách hàng trong mỗi ngành. Với tiêu chí tập trung vào chất lượng và mục tiêu mang lại giá trị bến vũng, chúng tôi có chính sách hoàn lại 100% chi phí nếu không đạt được mục tiêu.",
+      description: "Mỗi Zipcode, Vekmarketing cam kết chỉ phục vụ duy nhất 1 khách hàng trong mỗi ngành. Với tiêu chí tập trung vào chất lượng và mục tiêu mang lại giá trị bền vững, chúng tôi có chính sách hoàn lại 100% chi phí nếu không đạt được mục tiêu.",
     },
     {
       icon: <Smartphone className="h-8 w-8 text-primary" />,
       title: "Social Media Marketing",
-      description: "Sáng tạo nội dung và cập nhật đồng bộ trên tất cả các trang mạng xã hội. TD Agency đo lường các nền tảng phù hợp với khu vực, đối tượng khách hàng của Quý vị, từ đó thực hiện các chiến dịch cho hiệu quả, đảm bảo khoản đầu tư của bạn được sử dụng theo cách tiết kiệm chi phí nhất.",
+      description: "Sáng tạo nội dung và cập nhật đồng bộ trên tất cả các trang mạng xã hội. Vekmarketing đo lường các nền tảng phù hợp với khu vực, đối tượng khách hàng của Quý vị, từ đó thực hiện các chiến dịch cho hiệu quả, đảm bảo khoản đầu tư của bạn được sử dụng theo cách tiết kiệm chi phí nhất.",
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
       title: "Hệ thống bán hàng",
-      description: "Khi Quý vị cố gắng tìm kiếm khách hàng mà không có phương án quản trị, chúng tôi có thể giúp Quý vị đạt được 50% chi phí quảng cáo, và 70% doanh thu. Ngoài việc giúp tiết kiệm lệ phí mỗi tháng, chúng tôi có trên 80 nhân sự hỗ trợ về kỳ thuật làm việc tân tinh 24/7.",
+      description: "Khi Quý vị cố gắng tìm kiếm khách hàng mà không có phương án quản trị, Vekmarketing có thể giúp Quý vị đạt được 50% chi phí quảng cáo, và 70% doanh thu. Ngoài việc giúp tiết kiệm lệ phí mỗi tháng, chúng tôi có trên 80 nhân sự hỗ trợ về kỳ thuật làm việc tân tinh 24/7.",
     },
   ]
 
@@ -86,7 +87,7 @@ export default function HomePage() {
       icon: <Target className="h-12 w-12 text-primary" />,
       title: "MARKETING ĐỘC QUYỀN",
       features: [
-        "Mỗi zipcode TD Agency chỉ cung cấp dịch vụ SEO đến 1 khách hàng",
+        "Mỗi zipcode Vekmarketing chỉ cung cấp dịch vụ SEO đến 1 khách hàng",
         "Cam kết chất lượng và tiến độ",
         "Website chuẩn SEO với tốc độ tải cao",
         "1 stop support từ đội ngũ thương trực"
@@ -110,7 +111,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
        <section 
-        className="relative bg-gradient-to-br from-card to-background pt-10 pb-20 lg:pt-20 lg:pb-60"
+        className="relative bg-gradient-to-br from-card to-background pt-10 pb-20 lg:pt-32 lg:pb-40"
         style={{
           backgroundColor: '#1e3480',
           backgroundImage: `
@@ -145,16 +146,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge variant="secondary" className="w-fit bg-white/70 text-gray-800 border border-white/20">
+                {/* <Badge variant="secondary" className="w-fit bg-white/70 text-gray-800 border border-white/20">
                   Professional Marketing Solutions
-                </Badge>
+                </Badge> */}
                 <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                  <span className="text-primary">TD AGENCY</span>
+                  <span className="text-primary">Vekmarketing</span>
                   <br />
                   Giải pháp marketing chuyên biệt cho ngành Nail
                 </h1>
                 <p className="hidden sm:block text-xl text-white/90 leading-relaxed">
-                  Chúng tôi là TD Agency, chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
+                  Chúng tôi là Vekmarketing, chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
                 </p>
               </div>
 
@@ -227,34 +228,61 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center space-y-4">
-              <div className="flex justify-center mb-4">
-                <Search className="h-16 w-16 text-primary" />
+            <div className="bg-white rounded-xl shadow-lg group hover:shadow-xl transition-all duration-500 overflow-hidden">
+              {/* Image at top - taller to replace icon space */}
+              <div className="h-64 overflow-hidden">
+                <img 
+                  src="/imgi_18_csm_merchant_2_53ea1c7e80.webp" 
+                  alt="Hiểu ngành - Hiểu khách hàng"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
-              <h3 className="text-xl font-bold text-foreground">Hiểu ngành - Hiểu khách hàng</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Chúng tôi xuất phát từ thực tế ngành nail, hiểu rõ hành vi của khách hàng tại thị trường Pháp và Việt Nam. Nhờ đó, mọi chiến lược marketing đều được thiết kế riêng, sát với nhu cầu thực tế của tiệm nail.
-              </p>
+              
+              {/* Content */}
+              <div className="text-center space-y-4 p-6">
+                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Hiểu ngành - Hiểu khách hàng</h3>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Chúng tôi xuất phát từ thực tế ngành nail, hiểu rõ hành vi của khách hàng tại thị trường Pháp và Việt Nam. Nhờ đó, mọi chiến lược marketing đều được thiết kế riêng, sát với nhu cầu thực tế của tiệm nail.
+                </p>
+              </div>
             </div>
             
-            <div className="text-center space-y-4">
-              <div className="flex justify-center mb-4">
-                <Settings className="h-16 w-16 text-primary" />
+            <div className="bg-white rounded-xl shadow-lg group hover:shadow-xl transition-all duration-500 overflow-hidden">
+              {/* Image at top - taller to replace icon space */}
+              <div className="h-64 overflow-hidden">
+                <img 
+                  src="/imgi_14_logo-slogan-800x557.jpg" 
+                  alt="Giải pháp toàn diện, dễ áp dụng"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
-              <h3 className="text-xl font-bold text-foreground">Giải pháp toàn diện, dễ áp dụng</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Từ xây dựng thương hiệu, thiết kế website, đến chạy quảng cáo địa phương và quản lý mạng xã hội – bạn có thể chọn dịch vụ trọn gói hoặc từng phần tùy ngân sách. Chúng tôi làm marketing dễ hiểu, dễ triển khai.
-              </p>
+              
+              {/* Content */}
+              <div className="text-center space-y-4 p-6">
+                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Giải pháp toàn diện, dễ áp dụng</h3>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Từ xây dựng thương hiệu, thiết kế website, đến chạy quảng cáo địa phương và quản lý mạng xã hội – bạn có thể chọn dịch vụ trọn gói hoặc từng phần tùy ngân sách. Chúng tôi làm marketing dễ hiểu, dễ triển khai.
+                </p>
+              </div>
             </div>
             
-            <div className="text-center space-y-4">
-              <div className="flex justify-center mb-4">
-                <Heart className="h-16 w-16 text-primary" />
+            <div className="bg-white rounded-xl shadow-lg group hover:shadow-xl transition-all duration-500 overflow-hidden">
+              {/* Image at top - taller to replace icon space */}
+              <div className="h-64 overflow-hidden">
+                <img 
+                  src="/imgi_18_Artboard-9-1-1920x1281.jpeg" 
+                  alt="Đồng hành và hỗ trợ sát sao"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
-              <h3 className="text-xl font-bold text-foreground">Đồng hành và hỗ trợ sát sao</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Không chỉ làm marketing, chúng tôi đồng hành như một người bạn đồng hành kinh doanh. Tư vấn chiến lược, hỗ trợ xử lý vấn đề, và luôn sẵn sàng khi bạn cần – ngay cả sau khi dịch vụ đã hoàn tất.
-              </p>
+              
+              {/* Content */}
+              <div className="text-center space-y-4 p-6">
+                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Đồng hành và hỗ trợ sát sao</h3>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Không chỉ làm marketing, chúng tôi đồng hành như một người bạn đồng hành kinh doanh. Tư vấn chiến lược, hỗ trợ xử lý vấn đề, và luôn sẵn sàng khi bạn cần – ngay cả sau khi dịch vụ đã hoàn tất.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -281,7 +309,7 @@ export default function HomePage() {
             <Badge variant="secondary" className="w-fit mx-auto">
               OUR SERVICES
             </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Dịch vụ trọn gói của TD Agency</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Dịch vụ trọn gói của Vekmarketing</h2>
                         <div className="max-w-4xl mx-auto space-y-4">
               <p className="text-xl text-foreground">
                 Tiết kiệm 1-2 giờ mỗi ngày • Tăng thu nhập đột phá • Giảm chi phí $4.000-$6.000
@@ -318,12 +346,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why TD Agency */}
+      {/* Why Vekmarketing */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-primary uppercase">
-              TẠI SAO NÊN CHỌN TD AGENCY?
+              TẠI SAO NÊN CHỌN Vekmarketing?
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Chúng tôi cung cấp giải pháp trọn gói và đồng bộ nhằm quản lý danh tiếng, tăng doanh thu cho quý khách hàng một cách bền vững, đồng thời xây dựng một hệ thống tự động hoá chăm sóc, kêu gọi khách hàng quay lại sử dụng dịch vụ.
@@ -402,6 +430,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <FloatingButtons />
       <Footer />
     </div>
   )

@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -28,7 +29,7 @@ export default function ResourcePage() {
 
   const services = {
     website: {
-      title: "Faber website",
+      title: "Vek website",
       icon: "🌐",
       description: "Dịch vụ thiết kế và lập trình website bán hàng, website giới thiệu doanh nghiệp và quảng bá dịch vụ, sản phẩm,... tạo kênh tìm kiếm khách hàng tiềm năng cho doanh nghiệp và chủ shop.",
       faqs: [
@@ -51,7 +52,7 @@ export default function ResourcePage() {
       ]
     },
     branding: {
-      title: "Faber Branding",
+      title: "Vek Branding",
       icon: "🎨",
       description: "Dịch vụ xây dựng thương hiệu toàn diện, từ thiết kế logo, bộ nhận diện thương hiệu đến chiến lược định vị thương hiệu trên thị trường.",
       faqs: [
@@ -66,7 +67,7 @@ export default function ResourcePage() {
       ]
     },
     content: {
-      title: "Faber Content",
+      title: "Vek Content",
       icon: "📝",
       description: "Dịch vụ sản xuất nội dung chất lượng cao, từ bài viết blog, nội dung mạng xã hội đến video marketing và các tài liệu truyền thông.",
       faqs: [
@@ -81,7 +82,7 @@ export default function ResourcePage() {
       ]
     },
     ads: {
-      title: "Faber Ads",
+      title: "Vek Ads",
       icon: "📱",
       description: "Dịch vụ quảng cáo trực tuyến chuyên nghiệp trên các nền tảng Google Ads, Facebook Ads, Zalo Ads và các kênh digital khác.",
       faqs: [
@@ -96,7 +97,7 @@ export default function ResourcePage() {
       ]
     },
     seomap: {
-      title: "Faber SEO Map",
+      title: "Vek SEO Map",
       icon: "🗺️",
       description: "Dịch vụ tối ưu hóa website lên TOP Google, bao gồm SEO onpage, offpage và local SEO để tăng khả năng hiển thị trên công cụ tìm kiếm.",
       faqs: [
@@ -111,7 +112,7 @@ export default function ResourcePage() {
       ]
     },
     marketing: {
-      title: "Faber Marketing",
+      title: "Vek Marketing",
       icon: "📊",
       description: "Dịch vụ marketing tổng thể, bao gồm lập chiến lược marketing, phân tích thị trường, quản lý mạng xã hội và đo lường hiệu quả.",
       faqs: [
@@ -128,12 +129,12 @@ export default function ResourcePage() {
   }
 
   const sidebarItems = [
-    { id: 'website', label: 'Faber Website', active: true },
-    { id: 'branding', label: 'Faber Branding', active: false },
-    { id: 'content', label: 'Faber Content', active: false },
-    { id: 'ads', label: 'Faber Ads', active: false },
-    { id: 'seomap', label: 'Faber SEO Map', active: false },
-    { id: 'marketing', label: 'Faber Marketing', active: false },
+    { id: 'website', label: 'Vek Website', active: true },
+    { id: 'branding', label: 'Vek Branding', active: false },
+    { id: 'content', label: 'Vek Content', active: false },
+    { id: 'ads', label: 'Vek Ads', active: false },
+    { id: 'seomap', label: 'Vek SEO Map', active: false },
+    { id: 'marketing', label: 'Vek Marketing', active: false },
   ]
 
   const currentService = services[activeService as keyof typeof services]
@@ -236,46 +237,7 @@ export default function ResourcePage() {
         </div>
       </section>
 
-      {/* Floating Elements */}
-      {/* Chat Buttons */}
-      <div className="fixed right-4 bottom-20 flex flex-col gap-3 z-40">
-        <Button 
-          size="icon" 
-          className="w-14 h-14 rounded-full shadow-lg"
-          style={{ backgroundColor: '#273F4F', color: '#EFEEEA' }}
-          title="Chat Zalo"
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#273F4F'}
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Button>
-        <Button 
-          size="icon" 
-          className="w-14 h-14 rounded-full shadow-lg"
-          style={{ backgroundColor: '#273F4F', color: '#EFEEEA' }}
-          title="Chat Messenger"
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#273F4F'}
-        >
-          <Phone className="h-6 w-6" />
-        </Button>
-      </div>
-
-      {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <Button
-          onClick={scrollToTop}
-          size="icon"
-          className="fixed right-4 bottom-4 w-12 h-12 rounded-full shadow-lg z-50"
-          style={{ backgroundColor: '#FE7743', color: '#EFEEEA' }}
-          title="Lên đầu trang"
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FE7743'}
-        >
-          <ArrowUp className="h-5 w-5" />
-        </Button>
-      )}
-
+      <FloatingButtons />
       <Footer />
     </div>
   )

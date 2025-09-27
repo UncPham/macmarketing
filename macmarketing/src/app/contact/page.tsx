@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react"
 
@@ -75,14 +76,17 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-sm mb-2">Theo dõi chúng tôi</p>
                     <div className="flex space-x-2">
-                      <a href="#" className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">
+                      <a href="https://www.facebook.com/vekmarketing" 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">
                         <Facebook className="h-4 w-4" />
                       </a>
-                      <a href="#" className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">
+                      <a href="https://www.instagram.com/vekmarketing" 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">
                         <Instagram className="h-4 w-4" />
-                      </a>
-                      <a href="#" className="flex items-center justify-center w-8 h-8 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors">
-                        <Youtube className="h-4 w-4" />
                       </a>
                     </div>
                   </div>
@@ -114,6 +118,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <FloatingButtons />
       <Footer />
     </div>
   )

@@ -16,9 +16,12 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "MAC Marketing - Professional Marketing Agency",
+  title: "Vekmarketing - Professional Marketing Agency",
   description: "Professional marketing services including digital marketing, branding, and business growth solutions.",
-  generator: "v0.app",
+  icons: {
+    icon: "/myicon.svg",
+    shortcut: "/myicon.svg",
+  },
 }
 
 export default function RootLayout({

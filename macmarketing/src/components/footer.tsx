@@ -9,8 +9,8 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">TD</div>
-              <span className="font-bold text-xl text-foreground">Agency</span>
+              <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">VEK</div>
+              <span className="font-bold text-xl text-foreground">Marketing</span>
             </div>
             <p className="text-muted-foreground text-sm">
                 Chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
@@ -88,14 +88,21 @@ export function Footer() {
 
             {/* Social Media */}
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.facebook.com/vekmarketing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/vekmarketing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
