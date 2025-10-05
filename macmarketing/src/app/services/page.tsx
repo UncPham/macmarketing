@@ -124,11 +124,6 @@ export default function ServicesPage() {
 
   const digitalServices = [
     {
-      feature: "Giá gói",
-      basic: "149€",
-      premium: "249€",
-    },
-    {
       feature: "MIỄN PHÍ tạo tài khoản social media chuyên nghiệp (nếu cần)",
       basic: true,
       premium: true,
@@ -176,8 +171,8 @@ export default function ServicesPage() {
       tier3: true,
     },
     {
-      feature: "Từ khóa lên top: Nail Salon /Manicure /Pedicure near me, Nail salon /Manicure /Pedicure + zip code, Nail salon /Manicure /Pedicure + tên thành phố",
-      tier3: "lên top 3 trang nhất Google MAP",
+      feature: "Từ khóa lên top: Nail Salon /Manicure /Pedicure near me, Nail salon /Manicure /Pedicure + zip code, Nail salon /Manicure /Pedicure + tên thành phố, giảm thiểu bad review",
+      tier3: "Lên top 3 trang nhất Google MAP",
     },
     {
       feature: "Hỗ trợ trả lời Review Google Map	",
@@ -201,12 +196,20 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-1 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-16 sm:py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/imgi_106_hand-holding-smartphone-social-media-concept-2048x1365.jpg')`
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center mb-4 sm:mb-6">
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold" style={{ color: '#273F4F' }}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               PRICING TABLE FOR
               <span className="block mt-2" style={{ color: '#FE7743' }}>NAIL SALON</span>
             </h1>
@@ -222,15 +225,15 @@ export default function ServicesPage() {
 
       {/* Combo Services */}
       <section className="py-4 sm:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#FFD700' }}>
-            <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden" style={{ backgroundColor: '#FFD700' }}>
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-4" style={{ backgroundColor: '#F5A623' }}>
+            <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden" style={{ backgroundColor: '#F5A623' }}>
             {/* Header */}
-            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#FFD700' }}>
+            <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#F5A623' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>COMBO SERVICES</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>ALL IN ONE</h2>
                 <div 
-                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#DAA520' }}
                 >
                   1 ZIPCODE - 1 KHÁCH HÀNG
@@ -240,18 +243,18 @@ export default function ServicesPage() {
 
             {/* Pricing Headers */}
             <div className="grid grid-cols-4 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
-              <div className="p-2 sm:p-4"></div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">3 THÁNG</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">499€</div>
+              <div className="p-1 sm:p-2"></div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">3 THÁNG</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">499€</div>
               </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">6 THÁNG</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">799€</div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">6 THÁNG</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">799€</div>
               </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">1 NĂM</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">1.299€</div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">1 NĂM</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">1.299€</div>
               </div>
             </div>
 
@@ -262,26 +265,26 @@ export default function ServicesPage() {
                 className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.threeMonths === 'boolean' ? (
-                    service.threeMonths ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.threeMonths ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.threeMonths}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.threeMonths}</span>
                   )}
                 </div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.sixMonths === 'boolean' ? (
-                    service.sixMonths ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.sixMonths ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.sixMonths}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.sixMonths}</span>
                   )}
                 </div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.oneYear === 'boolean' ? (
-                    service.oneYear ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.oneYear ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.oneYear}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.oneYear}</span>
                   )}
                 </div>
               </div>
@@ -292,7 +295,7 @@ export default function ServicesPage() {
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Website: từ 100€</span>
+                    <span>Chi phí thiết kế Website từ 100€</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
@@ -304,7 +307,7 @@ export default function ServicesPage() {
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
                     <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng mới đáng kể đến tiệm của bạn,
-VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span>
+VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</span>
                   </li>
                 </ul>
               </div>
@@ -316,15 +319,15 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến
 
       {/* Website Design Services */}
       <section className="py-4 sm:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#A3DC9A' }}>
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-4" style={{ backgroundColor: '#A3DC9A' }}>
             <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden" style={{ backgroundColor: '#A3DC9A' }}>
             {/* Header */}
-            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#A3DC9A' }}>
+            <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#A3DC9A' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>WEBSITE DESIGN</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>WEBSITE DESIGN</h2>
                 <div 
-                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#6B9F65' }}
                 >
                   1 ZIPCODE - 1 KHÁCH HÀNG
@@ -334,16 +337,16 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến
 
             {/* Pricing Headers */}
             <div className="grid grid-cols-3 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
-              <div className="p-2 sm:p-4"></div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">SILVER</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">299€</div>
-                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
+              <div className="p-1 sm:p-2"></div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">SILVER</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">150€</div>
+                {/* <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div> */}
               </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">GOLD</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">599€</div>
-                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">GOLD</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">300€</div>
+                {/* <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div> */}
               </div>
             </div>
 
@@ -354,19 +357,19 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến
                 className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.silver === 'boolean' ? (
-                    service.silver ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.silver ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.silver}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.silver}</span>
                   )}
                 </div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.gold === 'boolean' ? (
-                    service.gold ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.gold ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.gold}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.gold}</span>
                   )}
                 </div>
               </div>
@@ -377,10 +380,10 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến
               <div style={{ color: '#273F4F' }}>
                 <div className="font-bold mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Lưu ý</div>
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li className="flex items-start">
+                  {/* <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
                     <span>Website: từ 100€</span>
-                  </li>
+                  </li> */}
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
                     <span>Hosting: từ 10€/ tháng</span>
@@ -395,15 +398,15 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến
 
       {/* Digital Package */}
       <section className="py-4 sm:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#C6E7FF' }}>
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-4" style={{ backgroundColor: '#C6E7FF' }}>
             <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden border-gray-100" style={{ backgroundColor: '#C6E7FF' }}>
             {/* Header */}
-            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#C6E7FF' }}>
+            <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#C6E7FF' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>DIGITAL PACKAGE</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>DIGITAL PACKAGE</h2>
                 <div 
-                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#7BB5D9' }}
                 >
                   1 ZIPCODE - 1 KHÁCH HÀNG
@@ -413,16 +416,16 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến
 
             {/* Pricing Headers */}
             <div className="grid grid-cols-3 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
-              <div className="p-2 sm:p-4"></div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">BASIC</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">149€</div>
-                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
+              <div className="p-1 sm:p-2"></div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">BASIC</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">149€</div>
+                <div className="text-base sm:text-xl mt-1 sm:mt-2">mỗi tháng</div>
               </div>
-              <div className="text-white p-2 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
-                <div className="font-bold text-xs sm:text-sm md:text-lg">PREMIUM</div>
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold mt-1 sm:mt-2">249€</div>
-                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">PREMIUM</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">249€</div>
+                <div className="text-base sm:text-xl mt-1 sm:mt-2">mỗi tháng</div>
               </div>
             </div>
 
@@ -433,19 +436,19 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến
                 className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.basic === 'boolean' ? (
-                    service.basic ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.basic ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.basic}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.basic}</span>
                   )}
                 </div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.premium === 'boolean' ? (
-                    service.premium ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.premium ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.premium}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.premium}</span>
                   )}
                 </div>
               </div>
@@ -471,15 +474,15 @@ mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân s
 
       {/* SEO Map Services */}
       <section className="py-4 sm:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#FF8A8A' }}>
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-4" style={{ backgroundColor: '#FF8A8A' }}>
             <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden border-gray-100" style={{ backgroundColor: '#FF8A8A' }}>
             {/* Header */}
-            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#FF8A8A' }}>
+            <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#FF8A8A' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>DỊCH VỤ SEO MAP</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>DỊCH VỤ SEO MAP</h2>
                 <div 
-                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#CC5C5C' }}
                 >
                   1 ZIPCODE - 1 KHÁCH HÀNG! HỖ TRỢ 1 BƯỚC
@@ -487,11 +490,13 @@ mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân s
               </div>
             </div>
 
-            {/* Single Pricing Header */}
-            <div className="p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
-              <div className="text-white p-4 sm:p-6 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold">TOP 3 $ 299</div>
-                <div className="text-sm sm:text-lg mt-1 sm:mt-2">mỗi tháng</div>
+            {/* Pricing Headers */}
+            <div className="grid grid-cols-2 gap-1 sm:gap-2 p-1 sm:p-2 rounded-t-lg" style={{ backgroundColor: '#EFEEEA' }}>
+              <div className="p-1 sm:p-2"></div>
+              <div className="text-white p-2 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
+                <div className="font-bold text-sm sm:text-base md:text-xl">TOP 3</div>
+                <div className="text-xl sm:text-3xl md:text-4xl font-bold mt-1 sm:mt-2">299€</div>
+                <div className="text-base sm:text-xl mt-1 sm:mt-2">mỗi tháng</div>
               </div>
             </div>
 
@@ -502,12 +507,12 @@ mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân s
                 className="grid grid-cols-2 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-2 sm:p-4 text-xs sm:text-sm font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-2 sm:p-4 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center">
                   {typeof service.tier3 === 'boolean' ? (
-                    service.tier3 ? <Check className="w-4 h-4 sm:w-6 sm:h-6 mx-auto" style={{ color: '#FE7743' }} /> : <X className="w-4 h-4 sm:w-6 sm:h-6 text-gray-400 mx-auto" />
+                    service.tier3 ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
-                    <span className="text-xs font-medium" style={{ color: '#273F4F' }}>{service.tier3}</span>
+                    <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.tier3}</span>
                   )}
                 </div>
               </div>
@@ -538,15 +543,15 @@ khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span
 
       {/* Additional Services */}
       <section className="py-4 sm:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-6" style={{ backgroundColor: '#90E0EF' }}>
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-4" style={{ backgroundColor: '#90E0EF' }}>
             <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden" style={{ backgroundColor: '#90E0EF' }}>
             {/* Header */}
-            <div className="text-white p-3 sm:p-6" style={{ backgroundColor: '#90E0EF' }}>
+            <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#90E0EF' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>ADDITIONAL SERVICES</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>ADDITIONAL SERVICES</h2>
                 <div 
-                  className="text-xs sm:text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#5BACBF' }}
                 >
                   DỊCH VU BỔ SUNG / SẢN PHẨM
@@ -558,13 +563,13 @@ khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span
             {additionalServices.map((service, index) => (
               <div
                 key={index}
-                className="border-b transition-colors duration-150 hover:bg-[#F1F5F9] p-3 sm:p-4"
+                className="border-b transition-colors duration-150 hover:bg-[#F1F5F9] p-2 sm:p-3"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
                 <div className="flex justify-between items-center">
-                  <div className="text-xs sm:text-sm font-medium flex-1" style={{ color: '#273F4F' }}>{service.service}</div>
+                  <div className="text-sm sm:text-base font-medium flex-1" style={{ color: '#273F4F' }}>{service.service}</div>
                   <div className="ml-4 text-center">
-                    <span className="text-xs sm:text-sm font-bold px-2 py-1 rounded" style={{ backgroundColor: '#FE7743', color: 'white' }}>
+                    <span className="text-sm sm:text-base font-bold px-3 py-2 rounded" style={{ backgroundColor: '#FE7743', color: 'white' }}>
                       {service.price}
                     </span>
                   </div>

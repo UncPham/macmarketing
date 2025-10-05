@@ -45,8 +45,8 @@ export default function HomePage() {
   const services = [
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
-      title: "Xây dựng Website & App",
-      description: "Vekmarketing thiết kế và phát triển website, app phù hợp với bộ nhận diện và sở thích của từng khách hàng. Đồng thời đáp ứng được tiêu chuẩn SEO của Google, chúng tôi bảo đảm website của Quý vị được sử dụng trên tất cả các thiết bị công nghệ.",
+      title: "Xây dựng Website",
+      description: "Vekmarketing thiết kế và phát triển website phù hợp với bộ nhận diện và sở thích của từng khách hàng. Đồng thời đáp ứng được tiêu chuẩn SEO của Google, chúng tôi bảo đảm website của Quý vị được sử dụng trên tất cả các thiết bị công nghệ.",
     },
     {
       icon: <Search className="h-8 w-8 text-primary" />,
@@ -69,7 +69,7 @@ export default function HomePage() {
     { icon: <Users className="h-6 w-6" />, value: "100+", label: "Khách hàng hài lòng" },
     { icon: <Target className="h-6 w-6" />, value: "200+", label: "Dự án hoàn thành" },
     { icon: <TrendingUp className="h-6 w-6" />, value: "95%", label: "Tỷ lệ thành công" },
-    { icon: <Award className="h-6 w-6" />, value: "10+", label: "Năm kinh nghiệm" },
+    { icon: <Award className="h-6 w-6" />, value: "5+", label: "Năm kinh nghiệm" },
   ]
 
   const whyChooseUs = [
@@ -77,9 +77,8 @@ export default function HomePage() {
       icon: <TrendingUp className="h-12 w-12 text-primary" />,
       title: "TIẾT KIỆM CHI PHÍ",
       features: [
-        "Lệ phí thấp nhất Hoa Kỳ",
-        "80 nhân sự ngữ hỗ trợ Tiếng Việt 24/7",
-        "Tiền vào tài khoản ngay tiếp theo",
+        "Lệ phí thấp nhất Châu Âu",
+        "Đội ngũ nhân sự hỗ trợ Tiếng Việt 24/7",
         "Không hợp đồng ràng buộc"
       ]
     },
@@ -98,8 +97,8 @@ export default function HomePage() {
       title: "DỊCH VỤ ĐA DẠNG",
       features: [
         "Xây dựng thương hiệu, phát triển kênh mạng xã hội",
-        "Tối ưu hóa website, đưa doanh nghiệp lên top Google, tăng khả năng tiếp cận khách hàng.",
-        "Combo nhiều dịch vụ với chi phí tối ưu, phù hợp cho doanh nghiệp mọi quy mô.",
+        "Tối ưu hóa website, đưa cửa hàng lên top Google, tăng khả năng tiếp cận khách hàng.",
+        "Combo nhiều dịch vụ với chi phí tối ưu, phù hợp cho cửa hàng ở mọi quy mô.",
         "Marketing, SEO và hỗ trợ khách hàng trọn gói, tối ưu doanh thu ngành làm đẹp."
       ]
     }
@@ -143,29 +142,29 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-900/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                 {/* <Badge variant="secondary" className="w-fit bg-white/70 text-gray-800 border border-white/20">
                   Professional Marketing Solutions
                 </Badge> */}
-                <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                  <span className="text-primary">Vekmarketing</span>
-                  <br />
-                  Giải pháp marketing chuyên biệt cho ngành Nail
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
+                  <span>Giải pháp marketing chuyên biệt cho ngành Nail</span>
+                  {/* <br /> */}
+                  {/* Giải pháp marketing chuyên biệt cho ngành Nail */}
                 </h1>
-                <p className="hidden sm:block text-xl text-white/90 leading-relaxed">
+                <p className="hidden sm:block text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
                   Chúng tôi là Vekmarketing, chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
                 </p>
               </div>
 
-              <div className="flex flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 rounded-full" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 rounded-full" asChild>
                   <Link href="/services">
-                    Dịch vụ <ArrowRight className="ml-2 h-5 w-5" />
+                    Dịch vụ <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 bg-white/10 border-white/30 text-white hover:bg-white/20 rounded-full" asChild>
+                <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 bg-white/10 border-white/30 text-white hover:bg-white/20 rounded-full" asChild>
                   <Link href="/contact">Tư vấn miễn phí</Link>
                 </Button>
               </div>
@@ -213,12 +212,12 @@ export default function HomePage() {
       </section>
 
       {/* About us */}
-      <section className="py-20 bg-card">
+      <section className="py-10 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="w-fit mx-auto">
+            {/* <Badge variant="secondary" className="w-fit mx-auto">
               ABOUT US
-            </Badge>
+            </Badge> */}
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
               Chuyên gia Marketing <span className="text-primary">cho ngành Nail</span>
             </h2>
@@ -303,18 +302,18 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20" style={{ backgroundColor: '#282826' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="w-fit mx-auto">
+            {/* <Badge variant="secondary" className="w-fit mx-auto">
               OUR SERVICES
-            </Badge>
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Dịch vụ trọn gói của Vekmarketing</h2>
-                        <div className="max-w-4xl mx-auto space-y-4">
-              <p className="text-xl text-foreground">
+            </Badge> */}
+            <h2 className="text-3xl lg:text-5xl font-bold text-white">Dịch vụ trọn gói của Vekmarketing</h2>
+                        <div className="max-w-4xl mx-auto space-y-4 text-white">
+              <p className="text-xl text-white">
                 Tiết kiệm 1-2 giờ mỗi ngày • Tăng thu nhập đột phá • Giảm chi phí $4.000-$6.000
               </p>
-              <p className="text-lg text-foreground">
+              <p className="text-lg text-white">
                 Trải nghiệm công nghệ mới nhất và giải pháp tiên tiến trong lĩnh vực Merchant & Digital Marketing
               </p>
             </div>
@@ -322,21 +321,21 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border">
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border" style={{ backgroundColor: '#000000' }}>
                 <CardHeader className="space-y-4">
-                  <div className="flex justify-start">
+                  <div className="flex items-center gap-4">
                     {service.icon}
+                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed text-white">{service.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 text-white">
             <Button size="lg" asChild>
               <Link href="/services">
                 Xem thêm <ArrowRight className="ml-2 h-5 w-5" />
@@ -347,14 +346,14 @@ export default function HomePage() {
       </section>
 
       {/* Why Vekmarketing */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background" style={{ backgroundColor: 'white' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-primary uppercase">
-              TẠI SAO NÊN CHỌN Vekmarketing?
+            <h2 className="text-3xl lg:text-5xl font-bold text-primary">
+              Tại sao nên chọn Vekmarketing?
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Chúng tôi cung cấp giải pháp trọn gói và đồng bộ nhằm quản lý danh tiếng, tăng doanh thu cho quý khách hàng một cách bền vững, đồng thời xây dựng một hệ thống tự động hoá chăm sóc, kêu gọi khách hàng quay lại sử dụng dịch vụ.
+              Giải pháp trọn gói giúp tăng doanh thu bền vững và xây dựng hệ thống tự động chăm sóc khách hàng.
             </p>
           </div>
 
@@ -366,21 +365,21 @@ export default function HomePage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div className="relative p-8 flex flex-col lg:flex-row items-start lg:items-center gap-6">
+                <div className="relative p-4 sm:p-6 lg:p-8 flex flex-col lg:flex-row items-center lg:items-center gap-4 sm:gap-6">
                   {/* Left side - Icon and Title */}
-                  <div className="flex-shrink-0 flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:w-80">
-                    <div className="relative">
+                  <div className="flex-shrink-0 flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 lg:w-80 w-full lg:w-auto">
+                    <div className="relative flex justify-center lg:justify-start">
                       <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                      <div className="relative bg-gradient-to-br from-primary to-primary/10 rounded-full p-4 shadow-lg">
+                      <div className="relative bg-gradient-to-br from-primary to-primary/10 rounded-full p-3 sm:p-4 shadow-lg">
                         {item.icon}
                       </div>
                     </div>
                     
-                    <div className="text-center lg:text-left">
+                    <div className="text-center lg:text-left flex-1 lg:flex-none">
                       <div className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
                         0{index + 1}
                       </div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                         {item.title}
                       </h3>
                     </div>
@@ -411,7 +410,7 @@ export default function HomePage() {
       
 
       {/* CTA Section */}
-      <section className="py-20 bg-card">
+      {/* <section className="py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground">Bạn đã sẵn sàng phát triển doanh nghiệp của mình chưa?</h2>
           <p className="text-xl text-muted-foreground">
@@ -428,7 +427,7 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <FloatingButtons />
       <Footer />

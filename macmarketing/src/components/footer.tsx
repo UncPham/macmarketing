@@ -8,9 +8,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-primary text-primary-foreground px-3 py-1 rounded-md font-bold text-xl">VEK</div>
-              <span className="font-bold text-xl text-foreground">Marketing</span>
+            <div className="flex items-center">
+              <img 
+                src="/logo.svg" 
+                alt="VEK Marketing Logo" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-muted-foreground text-sm">
                 Chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
@@ -50,7 +53,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Services</h3>
             <ul className="space-y-2">
               <li>
@@ -66,7 +69,7 @@ export function Footer() {
                 <span className="text-muted-foreground">Hệ thống bán hàng</span>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div className="space-y-4">

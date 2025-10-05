@@ -14,6 +14,7 @@ export function Header() {
     { name: "Trang chủ", href: "/" },
     { name: "Giới thiệu", href: "/about" },
     { name: "Dịch vụ", href: "/services" },
+    { name: "Quản lý", href: "/manager" },
     { name: "Tài nguyên", href: "/resource" },
     { name: "Tin tức", href: "/news" },
     { name: "Liên hệ", href: "/contact" },
