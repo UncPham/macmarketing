@@ -28,7 +28,7 @@ export function FloatingButtons() {
         aria-label="Chat qua Messenger"
       >
         <MessageCircle className="h-6 w-6" />
-        <span className="absolute right-16 bg-gray-800 text-white text-sm px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+        <span className="absolute right-16 bg-gray-800 text-white text-sm px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none font-gmv-regular">
           Messenger
         </span>
       </a>

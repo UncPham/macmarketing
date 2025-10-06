@@ -36,13 +36,16 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section 
-        className="relative py-20 lg:py-32"
+      <section
+        className="relative -mt-20 py-20 lg:py-32"
         style={{
-          backgroundImage: `url('/imgi_106_hand-holding-smartphone-social-media-concept-2048x1365.jpg')`,
+          backgroundImage: `url('imgi_87_led-poster-background.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundPosition: 'center top',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'scroll',
+          paddingTop: '10rem',
+          minHeight: '50vh'
         }}
       >
         {/* Overlay for better text readability */}
@@ -53,11 +56,11 @@ export default function AboutPage() {
             {/* <Badge variant="secondary" className="w-fit mx-auto bg-white/10 text-white border-white/20">
               About Vekmarketing
             </Badge> */}
-            <h1 className="text-4xl lg:text-6xl font-bold text-white">
-              Chuyên gia Marketing <span className="text-primary">cho ngành Nail</span>
+            <h1 className="text-4xl lg:text-6xl font-bebas-black text-white">
+              Chuyên gia Marketing <span className="text-primary">cho ngành Nails</span>
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Với hơn 10 năm kinh nghiệm trong lĩnh vực marketing cho ngành nail, chúng tôi đã giúp hàng trăm tiệm nail
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-gmv-regular">
+              Với hơn 10 năm kinh nghiệm trong lĩnh vực marketing cho ngành nails, chúng tôi đã giúp hàng trăm tiệm nails
               phát triển thương hiệu và đạt được mục tiêu kinh doanh thông qua các chiến lược sáng tạo và giải pháp hiệu quả.
             </p>
           </div>
@@ -65,29 +68,29 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background" style={{backgroundColor: "white"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Câu chuyện của chúng tôi</h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <h2 className="text-3xl lg:text-4xl font-bebas-semibold text-foreground">Câu chuyện của chúng tôi</h2>
+              <div className="space-y-4 text-black leading-relaxed">
                 <p>
-                  Vekmarketing được thành lập với niềm tin rằng mỗi tiệm nail đều xứng đáng có được sự thành công. Chúng tôi bắt đầu
-                  với sứ mệnh đơn giản: giúp các tiệm nail phát triển bền vững thông qua các chiến lược marketing hiệu quả.
+                  Vekmarketing được thành lập với niềm tin rằng mỗi tiệm nails đều xứng đáng có được sự thành công. Chúng tôi bắt đầu
+                  với sứ mệnh đơn giản: giúp các tiệm nails phát triển bền vững thông qua các chiến lược marketing hiệu quả.
                 </p>
                 <p>
-                  Qua nhiều năm, chúng tôi đã phát triển thành agency marketing chuyên biệt cho ngành nail, mở rộng dịch vụ
+                  Qua nhiều năm, chúng tôi đã phát triển thành agency marketing chuyên biệt cho ngành nails, mở rộng dịch vụ
                   bao gồm thiết kế website, SEO, quản lý mạng xã hội và các giải pháp marketing tổng thể. Đội ngũ của chúng tôi
                   không ngừng phát triển, nhưng cam kết mang lại kết quả xuất sắc cho khách hàng vẫn không thay đổi.
                 </p>
                 <p>
-                  Ngày nay, chúng tôi tự hào đã giúp hơn 500 tiệm nail đạt được mục tiêu marketing, từ các tiệm mới mở
-                  đến những chuỗi tiệm nail lớn trên khắp các bang.
+                  Ngày nay, chúng tôi tự hào đã giúp hơn 500 tiệm nails đạt được mục tiêu marketing, từ các tiệm mới mở
+                  đến những chuỗi tiệm nails lớn trên khắp các bang.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <img src="/imgi_106_hand-holding-smartphone-social-media-concept-2048x1365.jpg" alt="Vekmarketing Office" className="rounded-lg shadow-lg" />
+              <img src="about_us.jpg" alt="Vekmarketing Office" className="rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -97,7 +100,7 @@ export default function AboutPage() {
       <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Giá trị cốt lõi</h2>
+            <h2 className="text-3xl lg:text-4xl font-bebas-semibold text-foreground">Giá trị cốt lõi</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Những giá trị cốt lõi này định hướng mọi hoạt động của chúng tôi và cách chúng tôi phục vụ khách hàng.
             </p>
@@ -122,7 +125,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold">Sẵn sàng hợp tác với chúng tôi?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bebas-semibold">Sẵn sàng hợp tác với chúng tôi?</h2>
           <p className="text-xl text-primary-foreground/90">
             Hãy thảo luận về cách chúng tôi có thể giúp tiệm nail của bạn phát triển và thành công.
           </p>

@@ -95,7 +95,12 @@ export default function ServicesPage() {
       gold: "4 tuần",
     },
     {
-      feature: "Viết bài giới thiệu và thiết kế web theo yêu cầu hoặc theo bộ nhận diện thương hiệu",
+      feature: "Thiết kế theo bộ nhận diện thương hiệu",
+      silver: false,
+      gold: true,
+    },
+    {
+      feature: "Viết bài giới thiệu và thiết kế web theo yêu cầu",
       silver: true,
       gold: true,
     },
@@ -171,8 +176,12 @@ export default function ServicesPage() {
       tier3: true,
     },
     {
-      feature: "Từ khóa lên top: Nail Salon /Manicure /Pedicure near me, Nail salon /Manicure /Pedicure + zip code, Nail salon /Manicure /Pedicure + tên thành phố, giảm thiểu bad review",
+      feature: "Từ khóa lên top: Nail Salon /Manicure /Pedicure near me, Nail salon /Manicure /Pedicure + zip code, Nail salon /Manicure /Pedicure + tên thành phố",
       tier3: "Lên top 3 trang nhất Google MAP",
+    },
+    {
+      feature: "Giảm thiểu bad review",
+      tier3: true,
     },
     {
       feature: "Hỗ trợ trả lời Review Google Map	",
@@ -197,9 +206,15 @@ export default function ServicesPage() {
 
       {/* Hero Section */}
       <section 
-        className="relative py-16 sm:py-20 bg-cover bg-center bg-no-repeat"
+        className="relative -mt-20 py-20 lg:py-32"
         style={{
-          backgroundImage: `url('/imgi_106_hand-holding-smartphone-social-media-concept-2048x1365.jpg')`
+          backgroundImage: `url('/service_price.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'scroll',
+          paddingTop: '10rem',
+          minHeight: '50vh'
         }}
       >
         {/* Overlay for better text readability */}
@@ -209,7 +224,7 @@ export default function ServicesPage() {
           <div className="text-center space-y-4 sm:space-y-6">
             <div className="flex items-center justify-center mb-4 sm:mb-6">
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bebas-black text-white">
               PRICING TABLE FOR
               <span className="block mt-2" style={{ color: '#FE7743' }}>NAIL SALON</span>
             </h1>
@@ -231,7 +246,7 @@ export default function ServicesPage() {
             {/* Header */}
             <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#F5A623' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>ALL IN ONE</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>ALL IN ONE</h2>
                 <div 
                   className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#DAA520' }}
@@ -262,25 +277,25 @@ export default function ServicesPage() {
             {comboServices.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9] items-center"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium flex items-center" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.threeMonths === 'boolean' ? (
                     service.threeMonths ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
                     <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.threeMonths}</span>
                   )}
                 </div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.sixMonths === 'boolean' ? (
                     service.sixMonths ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
                     <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.sixMonths}</span>
                   )}
                 </div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.oneYear === 'boolean' ? (
                     service.oneYear ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
@@ -325,7 +340,7 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</sp
             {/* Header */}
             <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#A3DC9A' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>WEBSITE DESIGN</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>WEBSITE DESIGN</h2>
                 <div 
                   className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#6B9F65' }}
@@ -354,18 +369,18 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</sp
             {websiteServices.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9] items-center"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium flex items-center" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.silver === 'boolean' ? (
                     service.silver ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
                     <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.silver}</span>
                   )}
                 </div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.gold === 'boolean' ? (
                     service.gold ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
@@ -404,7 +419,7 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</sp
             {/* Header */}
             <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#C6E7FF' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>DIGITAL PACKAGE</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>DIGITAL PACKAGE</h2>
                 <div 
                   className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#7BB5D9' }}
@@ -433,18 +448,18 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</sp
             {digitalServices.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                className="grid grid-cols-3 border-b transition-colors duration-150 hover:bg-[#F1F5F9] items-center"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium flex items-center" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.basic === 'boolean' ? (
                     service.basic ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
                     <span className="text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.basic}</span>
                   )}
                 </div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.premium === 'boolean' ? (
                     service.premium ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
@@ -462,7 +477,7 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</sp
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
                     <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng 
-mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span>
+mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</span>
                   </li>
                 </ul>
               </div>
@@ -480,7 +495,7 @@ mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân s
             {/* Header */}
             <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#FF8A8A' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>DỊCH VỤ SEO MAP</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>DỊCH VỤ SEO MAP</h2>
                 <div 
                   className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#CC5C5C' }}
@@ -504,11 +519,11 @@ mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân s
             {seoMapServices.map((service, index) => (
               <div
                 key={index}
-                className="grid grid-cols-2 border-b transition-colors duration-150 hover:bg-[#F1F5F9]"
+                className="grid grid-cols-2 border-b transition-colors duration-150 hover:bg-[#F1F5F9] items-center"
                 style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8FAFC', borderColor: 'rgba(39,63,79,0.08)' }}
               >
-                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium" style={{ color: '#273F4F' }}>{service.feature}</div>
-                <div className="p-1 sm:p-2 text-center">
+                <div className="p-1 sm:p-2 text-sm sm:text-base font-medium flex items-center" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
                   {typeof service.tier3 === 'boolean' ? (
                     service.tier3 ? <Check className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} /> : <X className="w-5 h-5 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} />
                   ) : (
@@ -531,7 +546,7 @@ Sau 6 tháng, VekMarketing gợi ý quý khách giữ service để giữ đư�
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
                     <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng mới đáng kể đến tiệm của bạn, VekMarketing 
-khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span>
+khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</span>
                   </li>
                 </ul>
               </div>
@@ -549,7 +564,7 @@ khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span
             {/* Header */}
             <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#90E0EF' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center sm:text-left" style={{ color: '#273F4F' }}>ADDITIONAL SERVICES</h2>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>ADDITIONAL SERVICES</h2>
                 <div 
                   className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#5BACBF' }}
@@ -588,7 +603,7 @@ khuyến nghị ngân sách quảng cáo hàng ngày từ 10 đến 15€.</span
             {/* Contact Info */}
             <div className="p-4 sm:p-8" style={{ backgroundColor: '#273F4F' }}>
               <div className="text-center">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3">Liên hệ ngay để được tư vấn!</h3>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bebas-semibold text-white mb-2 sm:mb-3">Liên hệ ngay để được tư vấn!</h3>
                 <p className="text-sm sm:text-base md:text-lg text-white mb-4 sm:mb-6">Chúng tôi cam kết mang lại hiệu quả tốt nhất cho salon của bạn</p>
                 <Button 
                   className="px-4 sm:px-8 py-2 sm:py-4 text-sm sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"

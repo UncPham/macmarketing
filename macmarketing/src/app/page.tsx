@@ -61,7 +61,7 @@ export default function HomePage() {
     {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
       title: "Hệ thống bán hàng",
-      description: "Khi Quý vị cố gắng tìm kiếm khách hàng mà không có phương án quản trị, Vekmarketing có thể giúp Quý vị đạt được 50% chi phí quảng cáo, và 70% doanh thu. Ngoài việc giúp tiết kiệm lệ phí mỗi tháng, chúng tôi có trên 80 nhân sự hỗ trợ về kỳ thuật làm việc tân tinh 24/7.",
+      description: "Khi Quý vị cố gắng tìm kiếm khách hàng mà không có phương án quản trị, Vekmarketing có thể giúp Quý vị đạt được 50% chi phí quảng cáo, và 70% doanh thu. Ngoài việc giúp tiết kiệm lệ phí mỗi tháng, chúng tôi có đội ngũ nhân sự hỗ trợ về kỳ thuật làm việc tân tinh 24/7.",
     },
   ]
 
@@ -79,7 +79,8 @@ export default function HomePage() {
       features: [
         "Lệ phí thấp nhất Châu Âu",
         "Đội ngũ nhân sự hỗ trợ Tiếng Việt 24/7",
-        "Không hợp đồng ràng buộc"
+        "Không hợp đồng ràng buộc",
+        "Chính sách hoàn tiền minh bạch"
       ]
     },
     {
@@ -107,104 +108,45 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
-       <section 
-        className="relative bg-gradient-to-br from-card to-background pt-10 pb-20 lg:pt-32 lg:pb-40"
+       <section
+        className="relative bg-gradient-to-br from-card to-background -mt-20 pt-0 pb-20 lg:pb-40"
         style={{
-          backgroundColor: '#1e3480',
-          backgroundImage: `
-            /* Hình thoi đỏ */
-            radial-gradient(ellipse 8px 8px at 15% 20%, #ef4444 0%, #ef4444 50%, transparent 50%),
-            radial-gradient(ellipse 6px 6px at 85% 15%, #ef4444 0%, #ef4444 50%, transparent 50%),
-            radial-gradient(ellipse 7px 7px at 25% 85%, #ef4444 0%, #ef4444 50%, transparent 50%),
-            radial-gradient(ellipse 8px 8px at 75% 90%, #ef4444 0%, #ef4444 50%, transparent 50%),
-            
-            /* Hình thoi xanh lá */
-            radial-gradient(ellipse 6px 6px at 45% 25%, #10b981 0%, #10b981 50%, transparent 50%),
-            radial-gradient(ellipse 8px 8px at 65% 75%, #10b981 0%, #10b981 50%, transparent 50%),
-            radial-gradient(ellipse 7px 7px at 35% 60%, #10b981 0%, #10b981 50%, transparent 50%),
-            
-            /* Hình thoi vàng */
-            radial-gradient(ellipse 7px 7px at 90% 35%, #f59e0b 0%, #f59e0b 50%, transparent 50%),
-            radial-gradient(ellipse 6px 6px at 10% 75%, #f59e0b 0%, #f59e0b 50%, transparent 50%),
-            
-            /* Vòng tròn xanh dương nhạt */
-            radial-gradient(circle 4px at 20% 45%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
-            radial-gradient(circle 5px at 80% 25%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
-            radial-gradient(circle 4px at 55% 15%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
-            radial-gradient(circle 3px at 30% 70%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
-            radial-gradient(circle 4px at 70% 55%, #60a5fa 0%, #60a5fa 100%, transparent 100%),
-            radial-gradient(circle 5px at 85% 80%, #60a5fa 0%, #60a5fa 100%, transparent 100%)
-          `,
-          backgroundSize: '100% 100%'
+          backgroundImage: 'url(/anh_nen.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'scroll',
+          minHeight: '100vh'
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-900/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+          <div className="flex items-center min-h-screen pt-20">
+            <div className="text-left space-y-6 sm:space-y-8 lg:space-y-10 max-w-5xl">
+              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
                 {/* <Badge variant="secondary" className="w-fit bg-white/70 text-gray-800 border border-white/20">
                   Professional Marketing Solutions
                 </Badge> */}
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
-                  <span>Giải pháp marketing chuyên biệt cho ngành Nail</span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bebas-black text-white leading-tight">
+                  <span>Giải pháp marketing chuyên biệt cho ngành Nails</span>
                   {/* <br /> */}
                   {/* Giải pháp marketing chuyên biệt cho ngành Nail */}
                 </h1>
-                <p className="hidden sm:block text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed">
+                <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-4xl font-gmv-regular">
                   Chúng tôi là Vekmarketing, chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 rounded-full" asChild>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <Button size="lg" className="text-lg sm:text-xl px-8 sm:px-10 py-3 sm:py-4 rounded-full" asChild>
                   <Link href="/services">
-                    Dịch vụ <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                    Dịch vụ <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 bg-white/10 border-white/30 text-white hover:bg-white/20 rounded-full" asChild>
+                <Button variant="outline" size="lg" className="text-lg sm:text-xl px-8 sm:px-10 py-3 sm:py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 rounded-full" asChild>
                   <Link href="/contact">Tư vấn miễn phí</Link>
                 </Button>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden rounded-lg shadow-2xl">
-              {/* Slideshow container */}
-              <div className="relative w-full h-[400px] lg:h-[500px]">
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Marketing Team ${index + 1}`}
-                    className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                      index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
-                  />
-                ))}
-                
-                {/* Navigation Arrows */}
-                <button
-                  onClick={goToPrevious}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
-                  aria-label="Previous image"
-                >
-                  <ChevronLeft className="h-6 w-6" />
-                </button>
-                
-                <button
-                  onClick={goToNext}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
-                  aria-label="Next image"
-                >
-                  <ChevronRight className="h-6 w-6" />
-                </button>
-
-                {/* Image counter */}
-                <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
-                  {currentImageIndex + 1} / {images.length}
-                </div>
               </div>
             </div>
           </div>
@@ -218,10 +160,10 @@ export default function HomePage() {
             {/* <Badge variant="secondary" className="w-fit mx-auto">
               ABOUT US
             </Badge> */}
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
+            <h2 className="text-3xl lg:text-5xl font-bebas-semibold text-foreground">
               Chuyên gia Marketing <span className="text-primary">cho ngành Nail</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-gmv-regular">
               Giúp các tiệm nail phát triển ổn định, thu hút khách hàng mới và giữ chân khách cũ bằng chiến lược marketing thông minh và hiệu quả.
             </p>
           </div>
@@ -239,8 +181,8 @@ export default function HomePage() {
               
               {/* Content */}
               <div className="text-center space-y-4 p-6">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Hiểu ngành - Hiểu khách hàng</h3>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                <h3 className="text-xl font-gmv-semibold text-foreground group-hover:text-primary transition-colors duration-300">Hiểu ngành - Hiểu khách hàng</h3>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300 font-gmv-regular">
                   Chúng tôi xuất phát từ thực tế ngành nail, hiểu rõ hành vi của khách hàng tại thị trường Pháp và Việt Nam. Nhờ đó, mọi chiến lược marketing đều được thiết kế riêng, sát với nhu cầu thực tế của tiệm nail.
                 </p>
               </div>
@@ -250,7 +192,7 @@ export default function HomePage() {
               {/* Image at top - taller to replace icon space */}
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="/imgi_14_logo-slogan-800x557.jpg" 
+                  src="/ab_2.jpg" 
                   alt="Giải pháp toàn diện, dễ áp dụng"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -258,8 +200,8 @@ export default function HomePage() {
               
               {/* Content */}
               <div className="text-center space-y-4 p-6">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Giải pháp toàn diện, dễ áp dụng</h3>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                <h3 className="text-xl font-gmv-semibold text-foreground group-hover:text-primary transition-colors duration-300">Giải pháp toàn diện, dễ áp dụng</h3>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300 font-gmv-regular">
                   Từ xây dựng thương hiệu, thiết kế website, đến chạy quảng cáo địa phương và quản lý mạng xã hội – bạn có thể chọn dịch vụ trọn gói hoặc từng phần tùy ngân sách. Chúng tôi làm marketing dễ hiểu, dễ triển khai.
                 </p>
               </div>
@@ -269,7 +211,7 @@ export default function HomePage() {
               {/* Image at top - taller to replace icon space */}
               <div className="h-64 overflow-hidden">
                 <img 
-                  src="/imgi_18_Artboard-9-1-1920x1281.jpeg" 
+                  src="/ab_3.jpg" 
                   alt="Đồng hành và hỗ trợ sát sao"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -277,8 +219,8 @@ export default function HomePage() {
               
               {/* Content */}
               <div className="text-center space-y-4 p-6">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">Đồng hành và hỗ trợ sát sao</h3>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                <h3 className="text-xl font-gmv-semibold text-foreground group-hover:text-primary transition-colors duration-300">Đồng hành và hỗ trợ sát sao</h3>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300 font-gmv-regular">
                   Không chỉ làm marketing, chúng tôi đồng hành như một người bạn đồng hành kinh doanh. Tư vấn chiến lược, hỗ trợ xử lý vấn đề, và luôn sẵn sàng khi bạn cần – ngay cả sau khi dịch vụ đã hoàn tất.
                 </p>
               </div>
@@ -304,32 +246,41 @@ export default function HomePage() {
       {/* Services Section */}
       <section className="py-20" style={{ backgroundColor: '#282826' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            {/* <Badge variant="secondary" className="w-fit mx-auto">
-              OUR SERVICES
-            </Badge> */}
-            <h2 className="text-3xl lg:text-5xl font-bold text-white">Dịch vụ trọn gói của Vekmarketing</h2>
-                        <div className="max-w-4xl mx-auto space-y-4 text-white">
-              <p className="text-xl text-white">
-                Tiết kiệm 1-2 giờ mỗi ngày • Tăng thu nhập đột phá • Giảm chi phí $4.000-$6.000
-              </p>
-              <p className="text-lg text-white">
-                Trải nghiệm công nghệ mới nhất và giải pháp tiên tiến trong lĩnh vực Merchant & Digital Marketing
-              </p>
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mb-16">
+            {/* Left side - Text content */}
+            <div className="flex-1 text-center lg:text-left space-y-4">
+              <h2 className="text-3xl lg:text-5xl font-bebas-semibold text-primary mb-10">Dịch vụ của Vekmarketing</h2>
+              <div className="max-w-4xl lg:max-w-none space-y-4 text-white">
+                <p className="text-lg text-white font-gmv-medium">
+                  Tiết kiệm 1-2 giờ mỗi ngày • Tăng thu nhập đột phá • Giảm chi phí $4.000-$6.000
+                </p>
+                <p className="text-lg text-white font-gmv-regular">
+                  Trải nghiệm công nghệ mới nhất và giải pháp tiên tiến trong lĩnh vực Digital Marketing
+                </p>
+              </div>
+            </div>
+            
+            {/* Right side - Animation */}
+            <div className="flex-shrink-0">
+              <img 
+                src="/ser_animation.gif" 
+                alt="Services Animation"
+                className="w-80 lg:w-96 h-auto rounded-lg shadow-lg"
+              />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border" style={{ backgroundColor: '#000000' }}>
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-none" style={{ backgroundColor: '#000000' }}>
                 <CardHeader className="space-y-4">
                   <div className="flex items-center gap-4">
                     {service.icon}
-                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-white font-gmv-semibold">{service.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed text-white">{service.description}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed text-white font-gmv-regular">{service.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -349,11 +300,11 @@ export default function HomePage() {
       <section className="py-20 bg-background" style={{ backgroundColor: 'white' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-primary">
+            <h2 className="text-3xl lg:text-5xl font-bebas-semibold text-primary">
               Tại sao nên chọn Vekmarketing?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Giải pháp trọn gói giúp tăng doanh thu bền vững và xây dựng hệ thống tự động chăm sóc khách hàng.
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-gmv-regular">
+              Giải pháp trọn gói giúp tăng doanh thu bền vững và xây dựng hệ thống chăm sóc khách hàng.
             </p>
           </div>
 
@@ -367,35 +318,35 @@ export default function HomePage() {
                 
                 <div className="relative p-4 sm:p-6 lg:p-8 flex flex-col lg:flex-row items-center lg:items-center gap-4 sm:gap-6">
                   {/* Left side - Icon and Title */}
-                  <div className="flex-shrink-0 flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 lg:w-80 w-full lg:w-auto">
+                  <div className="flex-shrink-0 flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 w-full lg:w-64">
                     <div className="relative flex justify-center lg:justify-start">
                       <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                       <div className="relative bg-gradient-to-br from-primary to-primary/10 rounded-full p-3 sm:p-4 shadow-lg">
                         {item.icon}
                       </div>
                     </div>
-                    
-                    <div className="text-center lg:text-left flex-1 lg:flex-none">
-                      <div className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
+
+                    <div className="text-center lg:text-left">
+                      <div className="text-xs font-gmv-medium text-primary uppercase tracking-wider mb-1">
                         0{index + 1}
                       </div>
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bebas-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                         {item.title}
                       </h3>
                     </div>
                   </div>
                   
                   {/* Right side - Features */}
-                  <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex-1 grid grid-cols-2 gap-4">
                     {item.features.map((feature, featureIndex) => (
-                      <div 
-                        key={featureIndex} 
-                        className="flex items-start gap-3 p-3 rounded-lg bg-background/50 hover:bg-background/80 transition-all duration-300 group-hover:shadow-md"
+                      <div
+                        key={featureIndex}
+                        className="flex items-start gap-3 p-3 rounded-lg bg-background/50 hover:bg-background/80 transition-all duration-300 group-hover:shadow-md h-full"
                       >
                         <div className="flex-shrink-0 mt-1">
                           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-primary to-primary/70 shadow-sm"></div>
                         </div>
-                        <p className="text-foreground text-base leading-relaxed font-medium group-hover:text-primary transition-colors duration-300">
+                        <p className="text-foreground text-base leading-relaxed font-gmv-regular group-hover:text-primary transition-colors duration-300">
                           {feature}
                         </p>
                       </div>

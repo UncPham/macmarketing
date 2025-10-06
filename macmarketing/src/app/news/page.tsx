@@ -61,12 +61,9 @@ export default function NewsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-card">
+      <section className="py-20 lg:py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8">
-            <Badge variant="secondary" className="w-fit mx-auto">
-              Latest News & Insights
-            </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground">
               <span className="text-primary">News & Updates</span>
             </h1>
