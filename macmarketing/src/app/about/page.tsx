@@ -60,7 +60,7 @@ export default function AboutPage() {
               Chuyên gia Marketing <span className="text-primary">cho ngành Nails</span>
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-gmv-regular">
-              Với hơn 10 năm kinh nghiệm trong lĩnh vực marketing cho ngành nails, chúng tôi đã giúp hàng trăm tiệm nails
+              Với hơn 5 năm kinh nghiệm trong lĩnh vực marketing cho ngành nails, chúng tôi đã giúp hàng trăm tiệm nails
               phát triển thương hiệu và đạt được mục tiêu kinh doanh thông qua các chiến lược sáng tạo và giải pháp hiệu quả.
             </p>
           </div>

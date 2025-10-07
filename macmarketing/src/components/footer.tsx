@@ -5,9 +5,9 @@ export function Footer() {
   return (
     <footer className="bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-30 lg:gap-50 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-50 max-w-6xl mx-auto">
           {/* Company Info */}
-          <div className="space-y-4 text-left">
+          <div className="space-y-4 text-left hidden md:block">
             <div className="flex items-center justify-start">
               <img
                 src="/logo.svg"
@@ -16,7 +16,9 @@ export function Footer() {
               />
             </div>
             <p className="text-muted-foreground text-sm font-gmv-regular">
-                Chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
+                Chuyên gia marketing cho ngành Nail
+                <br />
+                Thiết kế thương hiệu, quảng cáo, quản lý mạng xã hội.
             </p>
           </div>
 
@@ -39,11 +41,11 @@ export function Footer() {
                   Tài nguyên
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/news" className="text-muted-foreground hover:text-primary transition-colors">
                   Tin tức
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Liên hệ
@@ -88,9 +90,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-center">
+        {/* <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm font-gmv-regular">© 2025 TD Agency. All rights reserved.</p>
-        </div>
+        </div> */}
       </div>
     </footer>
   )

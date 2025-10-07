@@ -110,7 +110,7 @@ export default function HomePage() {
       <Header />
       {/* Hero Section */}
        <section
-        className="relative bg-gradient-to-br from-card to-background -mt-20 pt-0 pb-20 lg:pb-40"
+        className="relative bg-gradient-to-br from-card to-background -mt-20 pt-0 pb-12 lg:pb-12"
         style={{
           backgroundImage: 'url(/anh_nen.jpg)',
           backgroundSize: 'cover',
@@ -128,13 +128,13 @@ export default function HomePage() {
                 {/* <Badge variant="secondary" className="w-fit bg-white/70 text-gray-800 border border-white/20">
                   Professional Marketing Solutions
                 </Badge> */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bebas-black text-white leading-tight">
-                  <span>Giải pháp marketing chuyên biệt cho ngành Nails</span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bebas-semibold text-white leading-tight">
+                  <span>Giải pháp marketing chuyên biệt cho ngành Nail</span>
                   {/* <br /> */}
                   {/* Giải pháp marketing chuyên biệt cho ngành Nail */}
                 </h1>
                 <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-4xl font-gmv-regular">
-                  Chúng tôi là Vekmarketing, chuyên cung cấp giải pháp marketing chuyên biệt cho ngành nail – từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
+                  Chúng tôi là Vekmarketing, chuyên cung cấp giải pháp từ thiết kế thương hiệu, quảng cáo đến quản lý mạng xã hội.
                 </p>
               </div>
 
