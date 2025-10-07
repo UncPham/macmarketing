@@ -46,7 +46,7 @@ export default function HomePage() {
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
       title: "Xây dựng Website",
-      description: "Vekmarketing thiết kế và phát triển website phù hợp với bộ nhận diện và sở thích của từng khách hàng. Đồng thời đáp ứng được tiêu chuẩn SEO của Google, chúng tôi bảo đảm website của Quý vị được sử dụng trên tất cả các thiết bị công nghệ.",
+      description: "Vekmarketing thiết kế và phát triển website phù hợp với bộ nhận diện và sở thích của từng khách hàng. Đồng thời đáp ứng được tiêu chuẩn SEO của Google, chúng tôi bảo đảm website của bạn được sử dụng trên tất cả các thiết bị công nghệ.",
     },
     {
       icon: <Search className="h-8 w-8 text-primary" />,
@@ -56,12 +56,12 @@ export default function HomePage() {
     {
       icon: <Smartphone className="h-8 w-8 text-primary" />,
       title: "Social Media Marketing",
-      description: "Sáng tạo nội dung và cập nhật đồng bộ trên tất cả các trang mạng xã hội. Vekmarketing đo lường các nền tảng phù hợp với khu vực, đối tượng khách hàng của Quý vị, từ đó thực hiện các chiến dịch cho hiệu quả, đảm bảo khoản đầu tư của bạn được sử dụng theo cách tiết kiệm chi phí nhất.",
+      description: "Sáng tạo nội dung và cập nhật đồng bộ trên tất cả các trang mạng xã hội. Vekmarketing đo lường các nền tảng phù hợp với khu vực, đối tượng khách hàng của bạn, từ đó thực hiện các chiến dịch cho hiệu quả, đảm bảo khoản đầu tư của bạn được sử dụng theo cách tiết kiệm chi phí nhất.",
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
       title: "Hệ thống bán hàng",
-      description: "Khi Quý vị cố gắng tìm kiếm khách hàng mà không có phương án quản trị, Vekmarketing có thể giúp Quý vị đạt được 50% chi phí quảng cáo, và 70% doanh thu. Ngoài việc giúp tiết kiệm lệ phí mỗi tháng, chúng tôi có đội ngũ nhân sự hỗ trợ về kỳ thuật làm việc tân tinh 24/7.",
+      description: "Khi bạn cố gắng tìm kiếm khách hàng mà không có phương án quản trị, Vekmarketing có thể giúp bạn đạt được 50% chi phí quảng cáo, và 70% doanh thu. Ngoài việc giúp tiết kiệm lệ phí mỗi tháng, chúng tôi có đội ngũ nhân sự hỗ trợ về kỳ thuật làm việc tân tinh 24/7.",
     },
   ]
 
@@ -164,7 +164,7 @@ export default function HomePage() {
               Chuyên gia Marketing <span className="text-primary">cho ngành Nail</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-gmv-regular">
-              Giúp các tiệm nail phát triển ổn định, thu hút khách hàng mới và giữ chân khách cũ bằng chiến lược marketing thông minh và hiệu quả.
+              Giúp các tiệm Nail phát triển ổn định, thu hút khách hàng mới và giữ chân khách cũ bằng chiến lược marketing thông minh và hiệu quả.
             </p>
           </div>
 
@@ -183,7 +183,7 @@ export default function HomePage() {
               <div className="text-center space-y-4 p-6">
                 <h3 className="text-xl font-gmv-semibold text-foreground group-hover:text-primary transition-colors duration-300">Hiểu ngành - Hiểu khách hàng</h3>
                 <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300 font-gmv-regular">
-                  Chúng tôi xuất phát từ thực tế ngành nail, hiểu rõ hành vi của khách hàng tại thị trường Pháp và Việt Nam. Nhờ đó, mọi chiến lược marketing đều được thiết kế riêng, sát với nhu cầu thực tế của tiệm nail.
+                  Chúng tôi xuất phát từ thực tế ngành Nail, hiểu rõ hành vi của khách hàng tại thị trường Pháp và Việt Nam. Nhờ đó, mọi chiến lược marketing đều được thiết kế riêng, sát với nhu cầu thực tế của tiệm Nail.
                 </p>
               </div>
             </div>

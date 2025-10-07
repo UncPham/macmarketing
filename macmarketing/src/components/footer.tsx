@@ -37,7 +37,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/resource" className="text-muted-foreground hover:text-primary transition-colors">
                   Tài nguyên
                 </Link>
               </li>

@@ -9,7 +9,7 @@ import Link from "next/link"
 export default function ServicesPage() {
   const comboServices = [
     {
-      feature: "Được sử dụng web báo giá và thống kê cho tiệm nails của Vekmarketing",
+      feature: "Được sử dụng web báo giá và thống kê cho tiệm Nail của Vekmarketing",
       threeMonths: true,
       sixMonths: true,
       oneYear: true,
