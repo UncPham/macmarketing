@@ -188,7 +188,7 @@ export default function ProductsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 lg:py-32" style={{ backgroundColor: '#282826' }}>
+      <section className="py-20 lg:py-26" style={{ backgroundColor: '#282826' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
@@ -230,7 +230,7 @@ export default function ProductsPage() {
       <div className="min-h-screen py-16" style={{ backgroundColor: '#282826' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-xl md:text-3xl font-bold text-primary mb-4">Sản Phẩm Của Chúng Tôi</h2>
+            <h2 className="text-xl md:text-4xl font-bold text-primary mb-4">Sản Phẩm Của Chúng Tôi</h2>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
