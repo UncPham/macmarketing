@@ -188,26 +188,26 @@ export default function ProductsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-muted py-20 lg:py-32">
+      <section className="py-20 lg:py-32" style={{ backgroundColor: '#282826' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Nhận đánh giá chỉ trong{' '}
                 <span className="text-primary">3 giây</span>!
               </h1>
               
-              <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-8">
+              <h2 className="text-2xl lg:text-4xl font-bold text-white mb-8">
                 Tăng gấp đôi Google Reviews hàng tháng trong{' '}
                 <span className="text-primary">30 ngày</span>
               </h2>
               
-              <p className="hidden md:block text-lg text-muted-foreground mb-4">
+              <p className="hidden md:block text-lg text-white mb-4">
                 Dựa trên <span className="font-semibold text-primary">kết quả trung bình</span> của khách hàng chúng tôi.
               </p>
               
-              <p className="hidden md:block text-lg text-muted-foreground mb-8">
+              <p className="hidden md:block text-lg text-white mb-8">
                 Bạn tiếp xúc với <span className="font-semibold text-primary">khách hàng hàng ngày</span> — đừng 
                 bỏ lỡ <span className="font-semibold text-primary">cơ hội thu thập thêm nhiều đánh giá Google</span>!
               </p>
@@ -233,7 +233,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Section */}
-      <div className="min-h-screen bg-muted py-16">
+      <div className="min-h-screen py-16" style={{ backgroundColor: '#282826' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary mb-4">Sản Phẩm Của Chúng Tôi</h2>
