@@ -19,7 +19,7 @@ export function Header() {
     }
 
     // Always show scrolled state on resource and contact pages
-    if (pathname === '/resource' || pathname === '/contact' || pathname === '/news' || pathname === '/' || pathname.startsWith('/services') || pathname.startsWith('/about')) {
+    if (pathname === '/resource' || pathname === '/contact' || pathname === '/news' || pathname === '/' || pathname.startsWith('/services') || pathname.startsWith('/about') || pathname.startsWith('/products')) {
       setIsScrolled(true)
       return
     }
@@ -32,6 +32,7 @@ export function Header() {
     { name: "Trang chủ", href: "/" },
     { name: "Giới thiệu", href: "/about" },
     { name: "Dịch vụ", href: "/services" },
+    { name: "Sản phẩm", href: "/products" },
     // { name: "Quản lý", href: "/manager" },
     { name: "Tài nguyên", href: "/resource" },
     // { name: "Tin tức", href: "/news" },
