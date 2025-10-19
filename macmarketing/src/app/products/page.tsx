@@ -21,115 +21,115 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "Google Reviews - Plate",
+    name: "Thẻ Google Reviews",
     image: "/product_1.jpg",
     rating: 5,
     reviewCount: 1499,
-    price: "$49.90US"
+    price: "€9.90 EUR"
   },
   {
     id: 2,
-    name: "Build Your Bundle",
+    name: "Bảng NFC Instagram",
     image: "/product_2.jpg",
     rating: 5,
     reviewCount: 182,
-    price: "$49.90US"
+    price: "€19.90 EUR"
   },
   {
     id: 3,
-    name: "10-In-1 Smart Plate",
+    name: "Bảng NFC Google Reviews",
     image: "/product_3.jpg",
     rating: 5,
     reviewCount: 503,
-    price: "$49.90US"
+    price: "€19.90 EUR"
   },
   {
     id: 4,
-    name: "Google Reviews - Card",
+    name: "Bảng NFC Facebook",
     image: "/product_4.jpg",
     rating: 5,
     reviewCount: 460,
-    price: "$34.90US"
+    price: "€19.90 EUR"
   },
   {
     id: 5,
-    name: "Multi-Links Card",
+    name: "Bảng NFC Goolge/Instagram/Tripadvisor",
     image: "/product_5.jpg",
     rating: 5,
     reviewCount: 350,
-    price: "$39.90US"
+    price: "€29.90 EUR"
   },
   {
     id: 6,
-    name: "Create Your Own Custom",
+    name: "Bảng NFC Linkedin",
     image: "/product_6.jpg",
     rating: 5,
     reviewCount: 275,
-    price: "$59.90US"
+    price: "€19.90 EUR"
   },
   {
     id: 7,
-    name: "Stand for Digital Plate",
+    name: "Bảng NFC Tripadvisor",
     image: "/product_7.jpg",
     rating: 5,
     reviewCount: 120,
-    price: "$24.90US",
+    price: "€19.90 EUR",
   },
   {
     id: 8,
-    name: "Facebook - Plate",
+    name: "Bảng NFC Trustpilot",
     image: "/product_8.jpg",
     rating: 5,
     reviewCount: 890,
-    price: "$49.90US"
+    price: "€19.90 EUR"
   },
   {
     id: 9,
-    name: "Instagram - Smart Card",
+    name: "Bảng NFC Goolge/Instagram/Linkedin",
     image: "/product_9.jpg",
     rating: 5,
     reviewCount: 650,
-    price: "$39.90US"
+    price: "€29.90 EUR"
   },
   {
     id: 10,
-    name: "TikTok Reviews Bundle",
+    name: "Bảng NFC Goolge/Instagram/Facebook",
     image: "/product_10.jpg",
     rating: 5,
     reviewCount: 320,
-    price: "$44.90US",
+    price: "€29.90 EUR",
   },
   {
     id: 11,
-    name: "Multi-Platform Stand",
+    name: "Bảng NFC Goolge/Instagram",
     image: "/product_11.jpg",
     rating: 5,
     reviewCount: 780,
-    price: "$69.90US"
+    price: "€24.90 EUR"
   },
   {
     id: 12,
-    name: "Premium Review Kit",
+    name: "Bảng NFC Facebook/Instagram",
     image: "/product_12.jpg",
     rating: 5,
     reviewCount: 1250,
-    price: "$89.90US",
+    price: "€24.90 EUR",
   },
   {
     id: 13,
-    name: "Starter Pack - Basic",
+    name: "Bảng NFC Goolge/Linkedin",
     image: "/product_13.jpg",
     rating: 5,
     reviewCount: 210,
-    price: "$19.90US",
+    price: "€24.90 EUR",
   },
   {
     id: 14,
-    name: "Enterprise Solution",
+    name: "Bảng NFC Goolge/Tripadvisor",
     image: "/product_14.jpg",
     rating: 5,
     reviewCount: 95,
-    price: "$199.90US",
+    price: "€24.90 EUR",
   }
 ]
 
@@ -199,17 +199,11 @@ export default function ProductsPage() {
               </h1>
               
               <h2 className="text-2xl lg:text-4xl font-bold text-white mb-8">
-                Tăng gấp đôi Google Reviews hàng tháng trong{' '}
-                <span className="text-primary">30 ngày</span>
+                Cách tốt nhất để phát triển doanh nghiệp của bạn.
               </h2>
               
-              <p className="hidden md:block text-lg text-white mb-4">
-                Dựa trên <span className="font-semibold text-primary">kết quả trung bình</span> của khách hàng chúng tôi.
-              </p>
-              
               <p className="hidden md:block text-lg text-white mb-8">
-                Bạn tiếp xúc với <span className="font-semibold text-primary">khách hàng hàng ngày</span> — đừng 
-                bỏ lỡ <span className="font-semibold text-primary">cơ hội thu thập thêm nhiều đánh giá Google</span>!
+                Nhận thêm nhiều đánh giá <span className="font-semibold text-primary">Google</span> cùng <span className="font-semibold text-primary">VEK Marketing</span> và thu hút nhiều khách hàng hơn.
               </p>
             </div>
             
@@ -236,7 +230,7 @@ export default function ProductsPage() {
       <div className="min-h-screen py-16" style={{ backgroundColor: '#282826' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">Sản Phẩm Của Chúng Tôi</h2>
+            <h2 className="text-xl md:text-3xl font-bold text-primary mb-4">Sản Phẩm Của Chúng Tôi</h2>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
