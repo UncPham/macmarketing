@@ -65,11 +65,11 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center justify-start space-x-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground text-sm font-gmv-regular">0912 314 567</span>
+                <span className="text-muted-foreground text-sm font-gmv-regular">+8494 3995 695</span>
               </div>
               <div className="flex items-center justify-start space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground text-sm font-gmv-regular">info@tdagency.com</span>
+                <span className="text-muted-foreground text-sm font-gmv-regular">support@vekmarketing.com</span>
               </div>
             </div>
 
