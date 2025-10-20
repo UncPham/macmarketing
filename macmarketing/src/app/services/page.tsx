@@ -15,7 +15,7 @@ export default function ServicesPage() {
       oneYear: true,
     },
     {
-      feature: "Quản lý và bảo trì Website",
+      feature: "Quản lý và duy trì Website",
       threeMonths: false,
       sixMonths: true,
       oneYear: true,
@@ -24,7 +24,7 @@ export default function ServicesPage() {
       feature: "SEO Website, Seo Google Maps",
       threeMonths: "Top 1-10 Google Search",
       sixMonths: "Top 1-5 Google Search",
-      oneYear: "Top 1-3 Google Search",
+      oneYear: "Top 1-5 Google Search",
     },
     {
       feature: "Giảm thiểu Bad Review Google Map, Planity, Treatwell",
@@ -75,10 +75,10 @@ export default function ServicesPage() {
       oneYear: "10 QR Code",
     },
     {
-      feature: "Tặng bảng QR Collecting Review Linkupnex",
+      feature: "Tặng bảng QR NFC Review",
       threeMonths: false,
-      sixMonths: "5 QR Collecting Review",
-      oneYear: "10 QR Collecting Review",
+      sixMonths: "5 QR NFC Review",
+      oneYear: "10 QR NFC Review",
     },
     {
       feature: "Báo cáo hoạt động hàng tháng",
@@ -310,7 +310,7 @@ export default function ServicesPage() {
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Chi phí thiết kế Website từ 100€</span>
+                    <span>Chi phí thiết kế Website từ 100€ + 99€/năm cho hosting và bảo trì website</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
@@ -323,7 +323,12 @@ export default function ServicesPage() {
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
                     <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng mới đáng kể đến tiệm của bạn,
 VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</span>
-                  </li>
+                  </li> 
+                                    <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Bảng QR NFC Review: phí vận chuyển do khách hàng thanh toán</span>
+
+                  </li> 
                 </ul>
               </div>
             </div>
@@ -401,7 +406,7 @@ VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</sp
                   </li> */}
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Hosting: từ 10€/ tháng</span>
+                    <span>Hosting và bảo trì website: 99€/năm</span>
                   </li>
                 </ul>
               </div>
@@ -510,7 +515,7 @@ mới đáng kể đến tiệm của bạn,VekMarketing khuyến nghị ngân s
               <div className="p-1 sm:p-2"></div>
               <div className="text-white p-1 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #6F4B96 0%, #573F92 100%)' }}>
                 {/* <div className="font-bold text-xs sm:text-sm md:text-base">TOP 3</div> */}
-                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">299€</div>
+                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">199€</div>
                 <div className="text-xs sm:text-sm mt-1 sm:mt-2">mỗi tháng</div>
               </div>
             </div>
@@ -564,7 +569,7 @@ khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</span>
             {/* Header */}
             <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#90E0EF' }}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>ADDITIONAL SERVICES</h2>
+                <h2 className="text-xl sm:text-1xl md:text-2xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>ADDITIONAL SERVICES</h2>
                 <div 
                   className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
                   style={{ backgroundColor: '#5BACBF' }}
