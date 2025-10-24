@@ -261,15 +261,15 @@ export default function ServicesPage() {
               <div className="p-1 sm:p-2"></div>
               <div className="text-white p-1 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #6F4B96 0%, #573F92 100%)' }}>
                 <div className="font-bold text-xs sm:text-sm md:text-base">3 THÁNG</div>
-                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">499€</div>
+                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">399€</div>
               </div>
               <div className="text-white p-1 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #D61E90 0%, #B42F93 100%)' }}>
                 <div className="font-bold text-xs sm:text-sm md:text-base">6 THÁNG</div>
-                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">799€</div>
+                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">599€</div>
               </div>
               <div className="text-white p-1 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #F8A929 0%, #F07936 100%)' }}>
                 <div className="font-bold text-xs sm:text-sm md:text-base">1 NĂM</div>
-                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">1.299€</div>
+                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">999€</div>
               </div>
             </div>
 
