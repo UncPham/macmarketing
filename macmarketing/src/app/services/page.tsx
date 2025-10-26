@@ -85,7 +85,7 @@ export default function ServicesPage() {
     },
     {
       feature: "Hỗ trợ chạy quảng cáo trên Facebook, Instagram, Tiktok",
-      threeMonths: false,
+      threeMonths: true,
       sixMonths: true,
       oneYear: true,
     },
