@@ -7,6 +7,39 @@ import { Check, X } from "lucide-react"
 import Link from "next/link"
 
 export default function ServicesPage() {
+  const adspackage = [
+    {
+      feature: "Hỗ trợ chạy quảng cáo trên Facebook, Instagram, Tiktok",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Seo Google Maps",
+      threeMonths: "Top 1-10 Google Search",
+      sixMonths: "Top 1-5 Google Search",
+      oneYear: "Top 1-5 Google Search",
+    },
+    {
+      feature: "Hỗ trợ quản lý và trả lời đánh giá Google Map",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Hỗ trợ tăng Likes và Follows các trang mạng xã hội",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Báo cáo hoạt động hàng tháng",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+  ];
+
   const comboServices = [
     {
       feature: "Được sử dụng web báo giá và thống kê cho tiệm Nail của Vekmarketing",
@@ -234,6 +267,104 @@ export default function ServicesPage() {
                 style={{ backgroundColor: '#FE7743' }}
               ></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ADS Services */}
+      <section className="py-4 sm:py-8 bg-white">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-2 sm:p-2" style={{ backgroundColor: '#F3B39D' }}>
+            <div className="bg-white rounded-lg sm:rounded-xl overflow-hidden" style={{ backgroundColor: '#F3B39D' }}>
+            {/* Header */}
+            <div className="text-white p-2 sm:p-4" style={{ backgroundColor: '#F3B39D' }}>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-2 sm:space-y-0">
+                <h2 className="text-xl sm:text-1xl md:text-2xl font-bebas-semibold text-center sm:text-left" style={{ color: '#273F4F' }}>ADS PACKAGE</h2>
+                <div 
+                  className="text-sm sm:text-base font-medium px-2 sm:px-4 py-1 sm:py-2 rounded-lg text-white text-center"
+                  style={{ backgroundColor: '#F3753F' }}
+                >
+                  1 ZIPCODE - 1 KHÁCH HÀNG
+                </div>
+              </div>
+            </div>
+
+            {/* Pricing Headers */}
+            <div className="grid grid-cols-4 gap-1 sm:gap-2 p-1 sm:p-1 rounded-t-lg" style={{ backgroundColor: '#EDEFF0' }}>
+              <div className="p-1 sm:p-2"></div>
+              <div className="text-white p-1 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #6F4B96 0%, #573F92 100%)' }}>
+                <div className="font-bold text-xs sm:text-sm md:text-base">3 THÁNG</div>
+                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">199€</div>
+              </div>
+              <div className="text-white p-1 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #D61E90 0%, #B42F93 100%)' }}>
+                <div className="font-bold text-xs sm:text-sm md:text-base">6 THÁNG</div>
+                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">299€</div>
+              </div>
+              <div className="text-white p-1 sm:p-4 text-center rounded-lg" style={{ background: 'linear-gradient(135deg, #F8A929 0%, #F07936 100%)' }}>
+                <div className="font-bold text-xs sm:text-sm md:text-base">1 NĂM</div>
+                <div className="text-sm sm:text-xl md:text-2xl font-bold mt-1 sm:mt-2">499€</div>
+              </div>
+            </div>
+
+            {/* Features */}
+            {adspackage.map((service, index) => (
+              <div
+                key={index}
+                className="grid grid-cols-4 border-b transition-colors duration-150 hover:bg-[#F1F5F9] items-center"
+                style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#EDEFF0', borderColor: 'rgba(39,63,79,0.08)' }}
+              >
+                <div className="p-1 sm:p-2 text-xs sm:text-base font-bold flex items-center" style={{ color: '#273F4F' }}>{service.feature}</div>
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
+                  {typeof service.threeMonths === 'boolean' ? (
+                    service.threeMonths ? <Check className="w-4 h-4 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} strokeWidth={3} /> : <X className="w-4 h-4 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} strokeWidth={3} />
+                  ) : (
+                    <span className="text-xs sm:text-base font-base" style={{ color: '#273F4F' }}>{service.threeMonths}</span>
+                  )}
+                </div>
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
+                  {typeof service.sixMonths === 'boolean' ? (
+                    service.sixMonths ? <Check className="w-4 h-4 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} strokeWidth={3} /> : <X className="w-4 h-4 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} strokeWidth={3} />
+                  ) : (
+                    <span className="text-xs sm:text-base font-base" style={{ color: '#273F4F' }}>{service.sixMonths}</span>
+                  )}
+                </div>
+                <div className="p-1 sm:p-2 text-center flex items-center justify-center">
+                  {typeof service.oneYear === 'boolean' ? (
+                    service.oneYear ? <Check className="w-4 h-4 sm:w-7 sm:h-7 mx-auto" style={{ color: '#10b981' }} strokeWidth={3} /> : <X className="w-4 h-4 sm:w-7 sm:h-7 mx-auto" style={{ color: '#ef4444' }} strokeWidth={3} />
+                  ) : (
+                    <span className="text-xs sm:text-base font-base" style={{ color: '#273F4F' }}>{service.oneYear}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Additional Info */}
+            <div className="p-3 sm:p-6" style={{ backgroundColor: '#EDEFF0' }}>
+              <div style={{ color: '#273F4F' }}>
+                {/* <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Thanh toán trước tối thiểu 3 tháng. VekMarketing hoàn trả 100% chi phí nếu trong vòng 3 tháng không đạt cam kết.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Các loại QR Code: QR code đặt lịch hẹn (Booking QR), QR Code Menu, QR code mạng xã hội, QR code ưu đãi/khuyến mãi, QR code phản hồi/đánh giá</span>
+                  </li>
+                </ul> */}
+                <div className="font-bold mt-2 mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Lưu ý</div>
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+                  <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Thanh toán trước tối thiểu 3 tháng. VekMarketing hoàn trả 100% chi phí nếu trong vòng 3 tháng không đạt cam kết.</span>
+                  </li> 
+                                    <li className="flex items-start">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
+                    <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng mới đáng kể đến tiệm của bạn, VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</span>
+
+                  </li> 
+                </ul>
+              </div>
+            </div>
+            </div>{/* end inner card */}
           </div>
         </div>
       </section>
