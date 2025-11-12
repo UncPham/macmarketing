@@ -15,19 +15,19 @@ export default function ServicesPage() {
       oneYear: true,
     },
     {
-      feature: "Seo Google Maps",
-      threeMonths: "Top 1-10 Google Search",
-      sixMonths: "Top 1-5 Google Search",
-      oneYear: "Top 1-5 Google Search",
-    },
-    {
-      feature: "Hỗ trợ quản lý và trả lời đánh giá Google Map",
+      feature: "Hỗ trợ chạy quảng cáo trên Google, Google Maps",
       threeMonths: true,
       sixMonths: true,
       oneYear: true,
     },
     {
-      feature: "Hỗ trợ tăng Likes và Follows các trang mạng xã hội",
+      feature: "Quản lý và trả lời đánh giá Google Map",
+      threeMonths: true,
+      sixMonths: true,
+      oneYear: true,
+    },
+    {
+      feature: "Hỗ trợ đăng bài trên các trang mạng xã hội (Facebook, Instagram, Tiktok)",
       threeMonths: true,
       sixMonths: true,
       oneYear: true,
@@ -340,25 +340,15 @@ export default function ServicesPage() {
             {/* Additional Info */}
             <div className="p-3 sm:p-6" style={{ backgroundColor: '#EDEFF0' }}>
               <div style={{ color: '#273F4F' }}>
-                {/* <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Thanh toán trước tối thiểu 3 tháng. VekMarketing hoàn trả 100% chi phí nếu trong vòng 3 tháng không đạt cam kết.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Các loại QR Code: QR code đặt lịch hẹn (Booking QR), QR Code Menu, QR code mạng xã hội, QR code ưu đãi/khuyến mãi, QR code phản hồi/đánh giá</span>
-                  </li>
-                </ul> */}
                 <div className="font-bold mt-2 mb-2 sm:mb-3 text-sm sm:text-lg" style={{ color: '#FE7743' }}>Lưu ý</div>
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
                   <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Thanh toán trước tối thiểu 3 tháng. VekMarketing hoàn trả 100% chi phí nếu trong vòng 3 tháng không đạt cam kết.</span>
+                    <span>VEK Marketing có cung cấp dịch vụ tăng Like/Follow mạng xã hội, tăng đánh giá Google Maps và các trang đặt lịch online (Planity, Treatwell…), các dịch vụ này tính phí riêng.</span>
                   </li> 
                                     <li className="flex items-start">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0" style={{ backgroundColor: '#FE7743' }}></div>
-                    <span>Chi phí tháng chưa bao gồm phí chạy Ads trên Google, để tối đa hóa kết quả và thu hút lượng khách hàng mới đáng kể đến tiệm của bạn, VekMarketing khuyến nghị ngân sách quảng cáo hàng ngày từ 5€.</span>
+                    <span>Giá trên chưa bao gồm ngân sách quảng cáo trả cho các nền tảng (Google, Facebook, Instagram, TikTok…).</span>
 
                   </li> 
                 </ul>
